@@ -7,10 +7,10 @@ const Header = () => {
         <div className="logo">Maher Halabi</div>
         <nav>
           <ul>
-            <li>Link 1</li>
-            <li>Link 2</li>
-            <li>Link 3</li>
-            <li>Link 4</li>
+            <li>Home</li>
+            <li>About</li>
+            <li>Experience</li>
+            <li>Contact</li>
           </ul>
         </nav>
       </header>

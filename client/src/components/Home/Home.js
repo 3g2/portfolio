@@ -1,9 +1,8 @@
 import React from "react"
-
-const Contact = () => {
+const Home = () => {
   return (
     <div>
-      <h1>Contact</h1>
+      <h1>Home</h1>
       <div>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -21,4 +20,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default Home
