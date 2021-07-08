@@ -1,9 +1,9 @@
 import React from "react"
 
-const Experience = () => {
+const Index = () => {
   return (
     <div>
-      <h1>Experience</h1>
+      <h1>About</h1>
       <div>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -21,4 +21,4 @@ const Experience = () => {
   )
 }
 
-export default Experience
+export default Index

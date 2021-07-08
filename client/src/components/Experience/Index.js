@@ -1,9 +1,9 @@
 import React from "react"
 
-const About = () => {
+const Index = () => {
   return (
     <div>
-      <h1>About</h1>
+      <h1>Experience</h1>
       <div>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -21,4 +21,4 @@ const About = () => {
   )
 }
 
-export default About
+export default Index

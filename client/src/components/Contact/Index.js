@@ -1,6 +1,6 @@
 import React from "react"
 
-const Contact = () => {
+const Index = () => {
   return (
     <div>
       <h1>Contact</h1>
@@ -21,4 +21,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default Index

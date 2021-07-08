@@ -6,5 +6,5 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [`gatsby-plugin-sass`, `react-router`],
+  plugins: [`gatsby-plugin-sass`, `gatsby-plugin-layout`],
 }
