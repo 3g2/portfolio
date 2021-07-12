@@ -1,21 +1,37 @@
-import React from "react"
+import React, { useState } from "react"
+import { form, form_label, form_label_input } from "./Contact.module.scss"
 
 const Index = () => {
+  const [sender_data, set_sender_data] = useState({
+    email_address: "",
+    name: "",
+    phone_number: "",
+    description: "",
+  })
+
   return (
     <div>
       <h1>Contact</h1>
       <div>
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
-        </p>
+        <form className={form}>
+          <label className={form_label}>
+            Email Address
+            <input type="text" name="email_address" />
+          </label>
+          <label className={form_label}>
+            Name
+            <input type="text" name="name" />
+          </label>
+          <label className={form_label}>
+            Phone Number
+            <input type="text" name="phone_number" />
+          </label>
+          <label className={form_label}>
+            Description
+            <input type="text" name="description" />
+          </label>
+          <button type="submit">Send</button>
+        </form>
       </div>
     </div>
   )
