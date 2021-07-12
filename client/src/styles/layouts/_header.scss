@@ -1,25 +1,16 @@
-header {
+#header {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-header > .logo {
-    width: 50%;
-    justify-content: start;
-}
-
-header > nav {
+#header > nav {
     width: 50%;
 }
 
-header > nav > ul {
+#header > nav > ul {
     display: flex;
     flex-direction: row;
     list-style: none;
     justify-content: end;
-}
-
-header > nav > ul > li {
-  padding: 10px;
 }

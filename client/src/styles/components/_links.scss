@@ -1,0 +1,15 @@
+@import "../base/variables";
+
+.header_link {
+    text-decoration: none;
+    color: $span_color;
+    padding: 10px;
+}
+
+.header_link_logo {
+    text-decoration: none;
+    color: $header_color;
+    padding: 10px;
+    width: 50%;
+    justify-content: start;
+}

@@ -4,23 +4,23 @@ import { Link } from "gatsby"
 const Header = () => {
   return (
     <div>
-      <header>
-        <div className="logo">
-          <Link to="/">Maher Halabi</Link>
+      <header id="header">
+        <div class="header_link_logo">
+          <Link>Maher Halabi</Link>
         </div>
         <nav>
           <ul>
-            <li>
-              <Link to="/">Home</Link>
+            <li class="header_link">
+              <Link>Home</Link>
             </li>
-            <li>
-              <Link to="/about">About</Link>
+            <li class="header_link">
+              <Link>About</Link>
             </li>
-            <li>
-              <Link to="/experience">Experience</Link>
+            <li class="header_link">
+              <Link>Experience</Link>
             </li>
-            <li>
-              <Link to="/contact">Contact</Link>
+            <li class="header_link">
+              <Link>Contact</Link>
             </li>
           </ul>
         </nav>

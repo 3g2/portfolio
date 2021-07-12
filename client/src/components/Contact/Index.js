@@ -9,26 +9,30 @@ const Index = () => {
 
   return (
     <div>
-      <h1>Contact</h1>
+      <h1 class="header">Contact</h1>
       <div>
         <form class="form">
-          <label class="form_label">
-            Email Address
-            <input type="text" name="email_address" />
-          </label>
+          <div class="form_child_container"></div>
+          <div class="form_child_container"></div>
+          <div class="form_child_container"></div>
+          <div class="form_child_container"></div>
+          <label class="form_label">Email Address</label>
+          <input type="text" name="email_address" class="form_input" />
           <label class="form_label">
             Name
-            <input type="text" name="name" />
+            <input type="text" name="name" class="form_input" />
           </label>
           <label class="form_label">
             Phone Number
-            <input type="text" name="phone_number" />
+            <input type="text" name="phone_number" class="form_input" />
           </label>
           <label class="form_label">
             Description
-            <input type="text" name="description" />
+            <input type="text" name="description" class="form_input" />
           </label>
-          <button type="submit">Send</button>
+          <button type="submit" class="button_style_one">
+            Send
+          </button>
         </form>
       </div>
     </div>
