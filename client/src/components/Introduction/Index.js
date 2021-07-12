@@ -1,11 +1,10 @@
 import React from "react"
-import "./Home.scss"
 import { Link } from "gatsby"
 
-const Home = () => {
+const Introduction = () => {
   return (
     <div>
-      <h1>Home</h1>
+      <h1>Introduction</h1>
       <div>
         <p>
           I am an aspiring full-stack developer and a current computer science
@@ -22,4 +21,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Introduction
