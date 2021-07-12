@@ -1,6 +1,3 @@
-$test_color: white;
 
-* {
-    color: $test_color;
-    background-color: #2B2E4A;
-}
+@import 'components/header.scss';
+@import 'components/form.scss';
