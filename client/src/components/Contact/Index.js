@@ -1,4 +1,8 @@
 import React, { useEffect, useState } from "react"
+
+//2DO: Error handling and have all form details as required EXCEPT phone number.
+//Inlude a tomail option if the possibility of
+
 const Index = () => {
   const [sender_data, set_sender_data] = useState({
     email_address: "",
@@ -24,12 +28,29 @@ const Index = () => {
     console.log(sender_data)
   }
 
-  useEffect(() => {
-    console.log(sender_data)
-  }, [sender_data])
+  useEffect(() => {}, [sender_data])
+
+  const dynamicTextArea = value => {
+    let number_of_line_breaks = (value.match(/\n/g) || []).length
+
+    let new_height = 20 + number_of_line_breaks * 20 + 12 + 2
+    return new_height
+  }
+
+  let description_input = document.getElementById("dynamic_text_area")
+
+  function autoResize() {
+    description_input.style.height = "auto"
+    description_input.style.height = this.scrollHeight + "px"
+  }
+
+  if (description_input !== null) {
+    description_input.addEventListener("input", autoResize, false)
+    console.log(description_input.style.height)
+  }
 
   return (
-    <div>
+    <div class="contact_container">
       <h1 class="header">Contact</h1>
       <div>
         <form class="form" onSubmit={handleSubmit}>
@@ -75,9 +96,10 @@ const Index = () => {
           </div>
           <div class="form_child_container">
             <label class="form_label">Description</label>
-            <input
+            <textarea
               type="text"
               name="description"
+              id="dynamic_text_area"
               class="form_input"
               value={sender_data.description}
               onChange={handleChange}
@@ -85,6 +107,14 @@ const Index = () => {
           </div>
           <input class="button_style_one" value="Send" type="submit" />
         </form>
+        <div>
+          <h6 class="span">OR</h6>
+        </div>
+        <div>
+          <a class="button_style_one" href="mailto:m.ashrahfi@gmail.com">
+            Send
+          </a>
+        </div>
       </div>
     </div>
   )

@@ -1,13 +1,14 @@
 @import '../base/variables';
 
 .form {
-    display: flex;
-    flex-direction: column;
+
+
 }
 
 .form_child_container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    padding-bottom: 15px;
 }
 
 .form_label {
@@ -16,5 +17,7 @@
 }
 
 .form_input {
-
+    color: $span_color;
+    min-width: 350px;
+    min-height: 30px;
 }
