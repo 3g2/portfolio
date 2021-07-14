@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react"
+import * as yup from "yup"
+
 import { sendEmail } from "./Send_Email"
+import { validationSchema } from "./validation/Validation_Schema"
 
 //2DO: Error handling and have all form details as required EXCEPT phone number.
-//Inlude a tomail option if the possibility of
 
 const Index = () => {
   const [sender_data, set_sender_data] = useState({
@@ -28,13 +30,6 @@ const Index = () => {
       sender_data.phone_number,
       sender_data.description
     )
-  }
-
-  const dynamicTextArea = value => {
-    let number_of_line_breaks = (value.match(/\n/g) || []).length
-
-    let new_height = 20 + number_of_line_breaks * 20 + 12 + 2
-    return new_height
   }
 
   let description_input = document.getElementById("dynamic_text_area")
@@ -69,6 +64,7 @@ const Index = () => {
               type="text"
               name="first_name"
               class="form_input"
+              placeholder=""
               value={sender_data.first_name}
               onChange={handleChange}
             />
