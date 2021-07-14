@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react"
+import { sendEmail } from "./Send_Email"
 
 //2DO: Error handling and have all form details as required EXCEPT phone number.
 //Inlude a tomail option if the possibility of
@@ -19,16 +20,15 @@ const Index = () => {
 
   const handleSubmit = event => {
     event.preventDefault()
-    alert(
-      "A form was submitted by: " +
-        sender_data.first_name +
-        " " +
-        sender_data.last_name
+    alert("A form was submitted by: " + sender_data.description)
+    sendEmail(
+      sender_data.email_address,
+      sender_data.first_name,
+      sender_data.last_name,
+      sender_data.phone_number,
+      sender_data.description
     )
-    console.log(sender_data)
   }
-
-  useEffect(() => {}, [sender_data])
 
   const dynamicTextArea = value => {
     let number_of_line_breaks = (value.match(/\n/g) || []).length
@@ -46,7 +46,6 @@ const Index = () => {
 
   if (description_input !== null) {
     description_input.addEventListener("input", autoResize, false)
-    console.log(description_input.style.height)
   }
 
   return (
