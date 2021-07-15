@@ -1,8 +1,20 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Formik, Form, Field } from "formik"
 import { sendEmail } from "./Send_Email"
+import { sender_schema } from "./validation/Sender_Schema"
 
-const Form_Template = ({ validationSchema, handleSubmit }) => {
+const Form_Template = () => {
+  let description_input = document.getElementById("dynamic_text_area")
+
+  function autoResize() {
+    description_input.style.height = "auto"
+    description_input.style.height = this.scrollHeight + "px"
+  }
+
+  if (description_input !== null) {
+    description_input.addEventListener("input", autoResize, false)
+  }
+
   return (
     <Formik
       initialValues={{
@@ -12,7 +24,7 @@ const Form_Template = ({ validationSchema, handleSubmit }) => {
         phone_number: undefined,
         description: "",
       }}
-      validationSchema={validationSchema}
+      validationSchema={sender_schema}
       onSubmit={sender_data => {
         sendEmail(
           sender_data.email_address,
@@ -65,9 +77,9 @@ const Form_Template = ({ validationSchema, handleSubmit }) => {
           <div class="form_child_container">
             <label class="form_label">Description</label>
             <Field
+              as="textarea"
               type="text"
               name="description"
-              id="dynamic_text_area"
               class="form_input"
             />
             <div class="errors">
