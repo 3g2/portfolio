@@ -4,17 +4,6 @@ import { sendEmail } from "./Send_Email"
 import { sender_schema } from "./validation/Sender_Schema"
 
 const Form_Template = () => {
-  let description_input = document.getElementById("dynamic_text_area")
-
-  function autoResize() {
-    description_input.style.height = "auto"
-    description_input.style.height = this.scrollHeight + "px"
-  }
-
-  if (description_input !== null) {
-    description_input.addEventListener("input", autoResize, false)
-  }
-
   return (
     <Formik
       initialValues={{
@@ -47,6 +36,7 @@ const Form_Template = () => {
               ) : null}
             </div>
           </div>
+
           <div class="form_child_container">
             <label class="form_label">First Name</label>
             <Field type="text" name="first_name" class="form_input" />
@@ -66,8 +56,11 @@ const Form_Template = () => {
             </div>
           </div>
           <div class="form_child_container">
-            <label class="form_label">Phone Number</label>
+            <label class="form_label">
+              Phone Number • <i class="optional">Optional</i>
+            </label>
             <Field type="text" name="phone_number" class="form_input" />
+
             <div class="errors">
               {errors.phone_number && touched.phone_number ? (
                 <div> {errors.phone_number} </div>

@@ -5,13 +5,13 @@ const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2
 export let sender_schema = yup.object().shape({
   email_address: yup
     .string()
-    .email("Enter a valid email")
-    .required("Email is required"),
-  first_name: yup.string().required(),
-  last_name: yup.string().required(),
+    .email("Email address is not valid.")
+    .required("Email address is required."),
+  first_name: yup.string().required("First name is required."),
+  last_name: yup.string().required("Last name is required."),
   phone_number: yup
     .string()
     .matches(phoneRegExp, "Phone number is not valid")
     .notRequired(),
-  description: yup.string().required(),
+  description: yup.string().required("Description is required."),
 })

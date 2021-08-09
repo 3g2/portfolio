@@ -1,9 +1,23 @@
 import React from "react"
+import Card from "../utils/Card"
 
 const Index = () => {
   return (
     <div>
       <h1 class="header">Experience</h1>
+      <Card
+        title="Hause of Brands"
+        description="Website"
+        technologies={[
+          "MongoDB",
+          "Express",
+          "React",
+          "NodeJS",
+          "Material UI",
+          "AWS",
+          "Docker",
+        ]}
+      />
       <div>
         <p class="span">
           Lorem Ipsum is simply dummy text of the printing and typesetting

@@ -7,7 +7,7 @@ import Form_Template from "./Form_Template"
 const Index = () => {
   return (
     <div class="contact_container">
-      <h1 class="header">Contact</h1>
+      <h1 class="header">Get In Touch</h1>
       <div>
         <div>
           <Form_Template />
