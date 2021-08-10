@@ -1,11 +1,15 @@
 import React from "react"
 import Card from "../utils/Card"
 
+import { hause_of_brands_images } from "../Consts/SliderData"
+
 const Index = () => {
   return (
     <div>
       <h1 class="header">Experience</h1>
+
       <Card
+        slides={hause_of_brands_images}
         title="Hause of Brands"
         description="Website"
         technologies={[
