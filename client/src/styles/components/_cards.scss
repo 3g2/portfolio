@@ -1,5 +1,29 @@
-.card {
+@import '../base/variables';
 
+.card {
+    display: flex;
+    padding: 5px;
+    background-color: $span_color_one;
+}
+
+.card_image_container {
+    width: 50%;
+}
+
+.card_info_container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.card_info_container_div_one {
+    
+}
+
+.card_info_container_div_two {
+    margin-top: auto;
+    margin-bottom: 15px;
 }
 
 .card_image {
@@ -7,13 +31,20 @@
 }
 
 .card_title {
-    
+    color: $header_color;
 }
 
 .card_description {
-    
+    color: $span_color_one
 }
 
 .card_technologies {
+    color: $span_color_two;
+    display: flex;
+   
+}
+
+.card_technologies_span {
+    padding: 4px;
     
 }
