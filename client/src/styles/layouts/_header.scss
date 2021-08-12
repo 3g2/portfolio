@@ -1,7 +1,10 @@
+@import "../base/variables";
+
 #header {
     display: flex;
     flex-direction: row;
     align-items: center;
+    background-color: black;
 }
 
 #header > nav {
@@ -13,4 +16,17 @@
     flex-direction: row;
     list-style: none;
     justify-content: end;
+}
+
+.header_introduction_title {
+    font-size: $font_size_header;
+    color: $header_color;
+    margin: 0px;
+}
+
+.header_title {
+    font-size: $font_size_title;
+    color: $header_color;
+    margin: 0px;
+    text-decoration: underline;
 }

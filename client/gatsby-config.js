@@ -3,5 +3,16 @@ require("dotenv").config({
 })
 
 module.exports = {
-  plugins: [`gatsby-plugin-sass`, `gatsby-plugin-layout`],
+  plugins: [
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-layout`,
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        typekit: {
+          id: process.env.TYPEKIT_ID,
+        },
+      },
+    },
+  ],
 }

@@ -8,7 +8,7 @@ import Contact from "../components/Contact/Index.js"
 
 export default function Index() {
   return (
-    <div>
+    <div className="root">
       <Introduction />
       <About />
       <Experience />

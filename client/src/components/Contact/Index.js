@@ -7,17 +7,17 @@ import Form_Template from "./Form_Template"
 const Index = () => {
   return (
     <div class="contact_container">
-      <h1 class="header">Get In Touch</h1>
+      <h1 class="header_title">Get In Touch</h1>
       <div>
         <div>
           <Form_Template />
         </div>
         <div>
-          <h6 class="span">OR</h6>
+          <h6 class="contact_text">OR</h6>
         </div>
         <div>
           <a class="button_style_one" href="mailto:m.ashrahfi@gmail.com">
-            Send
+            Send through your default email app
           </a>
         </div>
       </div>

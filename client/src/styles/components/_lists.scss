@@ -1,0 +1,18 @@
+/*ABOUT SECTION LIST*/
+
+.tech_icons_list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tech_icons_section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.tech_icons {
+    size: 30px;
+}

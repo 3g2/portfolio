@@ -7,9 +7,12 @@
 }
 
 .header_link_logo {
-    text-decoration: none;
-    color: $header_color;
-    padding: 10px;
-    width: 50%;
+    width: 50vw;
     justify-content: start;
+
+}
+
+.header_link_logo_style {
+    height: 75px;
+    width: 75px;
 }

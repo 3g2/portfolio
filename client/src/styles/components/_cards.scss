@@ -1,13 +1,14 @@
 @import '../base/variables';
 
+
+
 .card {
-    display: flex;
-    padding: 5px;
-    background-color: $span_color_one;
+    display: flex;  
 }
 
 .card_image_container {
     width: 50%;
+    display: flex;
 }
 
 .card_info_container {
@@ -15,6 +16,30 @@
     display: flex;
     flex-direction: column;
     flex: 1;
+    padding: 10px
+}
+
+.card_info_sub_container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card_info_sub_container_title {
+    width: 50%;
+}
+
+.card_title {
+    color: $header_color;
+}
+
+.card_info_sub_container_date {
+    width: 50%;
+    
+}
+
+.card_date {
+    color: $header_color;
+    text-align: end;
 }
 
 .card_info_container_div_one {
@@ -30,10 +55,6 @@
 
 }
 
-.card_title {
-    color: $header_color;
-}
-
 .card_description {
     color: $span_color_one
 }
@@ -41,6 +62,7 @@
 .card_technologies {
     color: $span_color_two;
     display: flex;
+    flex-wrap: wrap;
    
 }
 

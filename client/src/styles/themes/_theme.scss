@@ -1,5 +1,11 @@
 @import '../base/variables';
 
-* {
+.root {
     background-color: $background_color;
+    font-family: $font_400
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
 }
