@@ -6,17 +6,17 @@ import Form_Template from "./Form_Template"
 
 const Index = () => {
   return (
-    <div class="contact_container">
-      <h1 class="header_title">Get In Touch</h1>
+    <div className="contact_container" id="contact">
+      <h1 className="header_title">Get In Touch</h1>
       <div>
         <div>
           <Form_Template />
         </div>
         <div>
-          <h6 class="contact_text">OR</h6>
+          <h6 className="contact_text">OR</h6>
         </div>
         <div>
-          <a class="button_style_one" href="mailto:m.ashrahfi@gmail.com">
+          <a className="button_style_one" href="mailto:m.ashrahfi@gmail.com">
             Send through your default email app
           </a>
         </div>

@@ -2,10 +2,13 @@
 
 .root {
     background-color: $background_color;
-    font-family: $font_400
-}
-
-body {
+    font-family: $font_400;
     margin: 0px;
     padding: 0px;
+}
+
+
+body {
+    padding: 0px;
+    margin: 0px;
 }

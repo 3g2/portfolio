@@ -4,7 +4,7 @@ import Technologies from "./Technologies"
 const Index = () => {
   const displayTechIcons = () => {}
   return (
-    <div className="about_container">
+    <div className="about_container" id="about">
       <h1 class="header_title">About</h1>
       <div>
         <p class="about_text">

@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 import logo from "../../images/logo_2.png"
 
 const Header = () => {
@@ -7,18 +7,20 @@ const Header = () => {
     <div>
       <header id="header">
         <div class="header_link_logo">
-          <img src={logo} class="header_link_logo_style" />
+          <AnchorLink to="/#introduction">
+            <img src={logo} class="header_link_logo_style" />
+          </AnchorLink>
         </div>
         <nav>
           <ul>
             <li class="header_link">
-              <Link>About</Link>
+              <AnchorLink to="/#about">About</AnchorLink>
             </li>
             <li class="header_link">
-              <Link>Projects</Link>
+              <AnchorLink to="/#projects">Projects</AnchorLink>
             </li>
             <li class="header_link">
-              <Link>Contact</Link>
+              <AnchorLink to="/#contact">Contact</AnchorLink>
             </li>
           </ul>
         </nav>
