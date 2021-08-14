@@ -4,15 +4,17 @@
 
 .card {
     display: flex;  
+    flex-direction: column;
+    background-color: rgba(255, 0, 0, 0.1);;
+    padding: 30px;
+    border-radius: 10px;
 }
 
 .card_image_container {
-    width: 50%;
     display: flex;
 }
 
 .card_info_container {
-    width: 50%;
     display: flex;
     flex-direction: column;
     flex: 1;

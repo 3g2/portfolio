@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 const Introduction = () => {
   //2DO: Navigate to connect section as user clicks on contact link
@@ -14,9 +14,9 @@ const Introduction = () => {
         </p>
       </div>
       <div>
-        <button className="button_style_one">
-          <Link>My Projects</Link>
-        </button>
+        <AnchorLink className="button_style_one" to="/#projects">
+          My Projects
+        </AnchorLink>
       </div>
     </div>
   )
