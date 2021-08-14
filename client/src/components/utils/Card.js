@@ -2,6 +2,8 @@ import React, { useState } from "react"
 import ImageSlider from "./ImageSlider"
 import Popup from "./Popup"
 
+import { AiFillCloseCircle } from "react-icons/ai"
+
 const Card = props => {
   const [pop_up_state, toggle_pop_up_state] = useState(false)
   return (
@@ -33,12 +35,18 @@ const Card = props => {
           pop_up_state={pop_up_state}
           toggle_pop_up_state={toggle_pop_up_state}
         >
-          <div>
-            <div className="card_pop_up_title_container">
-              <div>
-                <h2 className="card_pop_up_title">{props.title}</h2>
+          <div className="card_pop_up_header">
+            <div className="card_pop_up_header_child">
+              <div className="card_pop_up_title_container">
+                <div>
+                  <h2 className="card_pop_up_title">{props.title}</h2>
+                </div>
+              </div>
+              <div className="card_snippet_container">
+                <p className="card_snippet">{props.snippet}</p>
               </div>
             </div>
+
             <div>
               <button
                 className="close_pop_up"
@@ -46,7 +54,7 @@ const Card = props => {
                   toggle_pop_up_state(false)
                 }}
               >
-                X
+                <AiFillCloseCircle />
               </button>
             </div>
           </div>

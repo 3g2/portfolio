@@ -11,8 +11,7 @@ const HauseOfBrands = () => {
         slides={hause_of_brands_images}
         logo={logo}
         title="Hause of Brands"
-        snippet="Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry."
+        snippet="Full-stack business web-app that automates the process of wholesale remarketing for vehicles."
         description=" Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever
         since the 1500s, when an unknown printer took a galley of type and
