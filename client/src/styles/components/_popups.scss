@@ -1,3 +1,5 @@
+@import "../base/variables";
+
 .pop_up {
     position: fixed;
     top: 0;
@@ -12,6 +14,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: white;
 }
 
 .pop_up_inner {
@@ -19,7 +22,7 @@
     padding: 32px;
     width: 100%;
     max-width: 640px;
-    background-color: #FFF;
+    background-color: $background_color;
 }
 
 .pop_up_inner .close_pop_up {
