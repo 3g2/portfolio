@@ -4,7 +4,8 @@
     padding: 0;
     overflow: hidden;
     width: 100%;
-    height: 400px;
+    height: 700px;
+
 }
 
 .slider_container_grab {
@@ -18,7 +19,7 @@
 .slider_inner {
     position: absolute;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     pointer-events: none;
     align-items: center;
@@ -26,21 +27,22 @@
     left: 0;
     pointer-events: none;
     height: 100%;
-    width: 50%;
-
+    transform-origin: 50% 50%;
+    touch-action: pan-y;
+    user-select: none;
 }
 
 .slider_image_container {
-    width: 350px;
+    width: 700px;
     height: 100%;
-
     text-align: center;
+ 
 }
 
 .slider_image {
     border-radius: 30px;
-    width: 100%;
     height: 100%;
+    width: 100%;
     object-fit: contain; 
     pointer-events: none;
     user-drag: none;

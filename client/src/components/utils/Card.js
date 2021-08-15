@@ -1,7 +1,9 @@
 import React, { useState } from "react"
+import { Link } from "gatsby"
 import ImageSlider from "./ImageSlider"
 import Popup from "./Popup"
 
+import { BiLink } from "react-icons/bi"
 import { AiFillCloseCircle } from "react-icons/ai"
 
 const Card = props => {
@@ -35,18 +37,7 @@ const Card = props => {
           pop_up_state={pop_up_state}
           toggle_pop_up_state={toggle_pop_up_state}
         >
-          <div className="card_pop_up_header">
-            <div className="card_pop_up_header_child">
-              <div className="card_pop_up_title_container">
-                <div>
-                  <h2 className="card_pop_up_title">{props.title}</h2>
-                </div>
-              </div>
-              <div className="card_snippet_container">
-                <p className="card_snippet">{props.snippet}</p>
-              </div>
-            </div>
-
+          <div className="card_pop_up_toolbar">
             <div>
               <button
                 className="close_pop_up"
@@ -58,22 +49,43 @@ const Card = props => {
               </button>
             </div>
           </div>
+          <div className="card_pop_up_header">
+            <div className="card_pop_up_header_child">
+              <div className="card_pop_up_title_container">
+                <div>
+                  <h2 className="card_pop_up_title">{props.title}</h2>
+                </div>
+                <div className="card_pop_up_link_container">
+                  <Link
+                    className="card_pop_up_link"
+                    target="_blank"
+                    to="https://www.hauseofbrands.com/"
+                  >
+                    <BiLink />
+                  </Link>
+                </div>
+              </div>
+              <div className="card_snippet_container">
+                <p className="card_snippet">{props.snippet}</p>
+              </div>
+              <div className="card_pop_up_technologies_container">
+                <div className="card_pop_up_technologies_title">Tech Used:</div>
+                <div className="card_pop_up_technologies">
+                  {props.technologies.map(technology => (
+                    <div className="card_pop_up_technologies_span">
+                      {technology}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
 
           <div className="card_pop_up_image_container">
             <ImageSlider slides={props.slides} />
           </div>
           <div>
             <p className="card_pop_up_description">{props.description}</p>
-          </div>
-          <div className="card_pop_up_technologies_container">
-            <div>Tech Used:</div>
-            <div className="card_pop_up_technologies">
-              {props.technologies.map(technology => (
-                <div className="card_pop_up_technologies_span">
-                  {technology}
-                </div>
-              ))}
-            </div>
           </div>
         </Popup>
       </div>

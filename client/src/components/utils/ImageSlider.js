@@ -15,34 +15,35 @@ const ImageSlider = props => {
 
   const [initial_x, set_initial_x] = useState(0)
   const [x, set_x] = useState(0)
+  const [pressed, set_pressed] = useState(false)
   const [slider_inner_offset, set_slider_inner_offset] = useState(0)
 
   let slider = document.querySelector(".slider_container")
-  let slider_inner = document.querySelector(".slider_inner")
-  let pressed
+  let slider_inner = document.querySelector(".slider_inner", null)
 
   useEffect(() => {
-    slider_inner = 0
-  }, [])
+    return () => {}
+  }, [pressed])
 
   const handleSliderMouseDown = event => {
-    pressed = true
-    console.log("TF", pressed)
+    set_pressed(true)
+
     set_slider_inner_offset(slider_inner.offsetLeft)
     set_initial_x(event.nativeEvent.offsetX - slider_inner_offset)
-    console.log("X MOUSE D", initial_x)
-    console.log("INNER MOUSE D", slider_inner_offset)
+    // slider_inner.style.transform = `translate3d(${x}px, 0px, 0px)`
   }
 
   const handleSliderMouseUp = event => {
-    pressed = false
+    set_pressed(false)
+    set_slider_inner_offset(slider_inner.offsetLeft)
+    set_initial_x(event.nativeEvent.offsetX - slider_inner_offset)
   }
   const handleSliderMouseEnter = event => {
-    pressed = false
+    set_pressed(false)
   }
 
   const handleSliderMouseLeave = event => {
-    pressed = false
+    set_pressed(false)
   }
 
   const handleSliderMouseMove = event => {
@@ -51,14 +52,26 @@ const ImageSlider = props => {
 
     set_x(event.nativeEvent.offsetX)
     slider_inner.style.left = `${x - initial_x}px`
+    checkBoundary()
+  }
+
+  const checkBoundary = () => {
+    let outer = slider.getBoundingClientRect()
+    let inner = slider_inner.getBoundingClientRect()
+
+    if (parseInt(slider_inner.style.left) > 0) {
+      return (slider_inner.style.left = "0px")
+    } else if (inner.right < outer.right) {
+      return (slider_inner.style.left = `-${inner.width - outer.width}px`)
+    }
   }
 
   return (
     <div
       className={
-        (pressed = true
+        pressed
           ? "slider_container slider_container_grabbing"
-          : "slider_container slider_container_grab")
+          : "slider_container slider_container_grab"
       }
       onMouseDown={handleSliderMouseDown}
       onMouseUp={handleSliderMouseUp}

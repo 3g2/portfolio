@@ -3,7 +3,7 @@
 .card {
     display: flex;  
     flex-direction: row;
-    background-color: rgba(255, 255, 255, 0.2);;
+    background-color: rgba(255, 255, 255, 0.2);
     padding: 30px;
     border-radius: 10px;
     height: 100%;
@@ -71,6 +71,21 @@
 
 /*POPUP*/
 
+.card_pop_up_toolbar {
+    display: flex;
+    justify-content: end;
+}
+
+.card_pop_up_link_container {
+
+}
+
+.card_pop_up_link {
+    font-size: 50px;
+    justify-content: center;
+    color: white
+}
+
 .card_pop_up_header {
     display: flex;
     flex-direction: row;
@@ -86,6 +101,9 @@
 }
 
 .card_pop_up_title_container {
+    display: flex;
+
+    flex-direction: row;
 
 }
 
@@ -98,7 +116,6 @@
 
 .card_pop_up_image_container {
     display: flex;
-
 }
 
 .card_pop_up_description {
@@ -106,16 +123,26 @@
 }
 
 .card_pop_up_technologies_container {
+    margin-top: $margin_size_child;
+}
 
+.card_pop_up_technologies_title { 
+    color: $span_color_two;
+    font-size: $font_size_card_title;
 }
 
 .card_pop_up_technologies {
     color: $span_color_two;
     display: flex;
     flex-wrap: wrap;
-   
+    margin-top: 1rem;
+ 
 }
 
 .card_pop_up_technologies_span {
-    padding: 4px;
+    padding: 15px;
+    margin-right: 10px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    font-size: $font_size_card_span;
 }
