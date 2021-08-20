@@ -2,17 +2,6 @@ import React, { useState, useEffect } from "react"
 import { AiFillLeftCircle, AiFillRightCircle } from "react-icons/ai"
 
 const ImageSlider = props => {
-  // const [current_img, set_current_img] = useState(0)
-
-  // const slide_length = props.slides.length
-
-  // const next_slide = () => {
-  //   set_current_img(current_img === slide_length - 1 ? 0 : current_img + 1)
-  // }
-  // const prev_slide = () => {
-  //   set_current_img(current_img === 0 ? slide_length - 1 : current_img - 1)
-  // }
-
   const [slider_props, set_slider_props] = useState({
     is_pressed: false,
     initial_x: null,
@@ -20,10 +9,10 @@ const ImageSlider = props => {
   })
 
   const slider_settings = {
-    drag_speed: 1.25,
-    item_width: 300,
-    item_height: 180,
-    item_side_offsets: 15,
+    drag_speed: 1.85,
+    item_width: 850,
+    item_height: 400,
+    item_side_offsets: 5,
   }
 
   const sRef = React.createRef()
@@ -36,15 +25,8 @@ const ImageSlider = props => {
     return parseInt(el.replace("translateX(", "").replace("px)", ""), 10)
   }
 
-  /*
-    The Node.firstChild read-only property returns the node's first child in the 
-    tree,  or null if the node has no children. If the node is a Document, 
-    it returns the first node in the list of its direct children. 
-  */
-
   const handleMouseDown = event => {
     const current_ref = sRef.current
-    event.persist()
     current_ref.classList.add("active")
     const { initial_x, transform_left_offset } = slider_props
 
@@ -69,15 +51,9 @@ const ImageSlider = props => {
           `
       }
     )
-
-    // slider_inner.style.transform = `translate3d(${x}px, 0px, 0px)`
   }
 
   const handleMouseUp = event => {
-    handleSnap()
-  }
-
-  const handleMouseLeave = event => {
     handleSnap()
   }
 
@@ -99,19 +75,15 @@ const ImageSlider = props => {
   }
 
   const handleSnap = () => {
-    // const { isDown, startX, transLeftOffset } = this.state
     const current_ref = sRef.current
 
-    // Resetting
     set_slider_props({ is_pressed: false })
     current_ref.classList.remove("active")
 
-    // handeling Threshold
-    // (1) getting transValue
     const temp_threshold_offset = handleParseInt(
       current_ref.firstChild.style.transform
     )
-    // (2) items width - 30(first & last item removed margins) - containerWidth(b/c of ending part)
+
     const end =
       props.slides.length *
         (slider_settings.item_width + 2 * slider_settings.item_side_offsets) -
@@ -121,9 +93,12 @@ const ImageSlider = props => {
     // (3) check if we passing from threshold ( handeling Snap To Sides )
     if (temp_threshold_offset < 0 || temp_threshold_offset > end) {
       set_slider_props({ is_pressed: false })
+
+      //https://css-tricks.com/emulating-css-timing-functions-javascript/
+
       current_ref.firstChild.style.cssText = `
        transform: translateX(${temp_threshold_offset < 0 ? 0 : end}px);
-       transition: transform 0.5s cubic-bezier(.25,.72,.51,.96);
+       transition: transform 0.5s cubic-bezier(.25, .72, .51, .96);
      `
     }
   }
@@ -148,7 +123,6 @@ const ImageSlider = props => {
       ref={sRef}
       onMouseDown={handleMouseDown}
       onMouseUp={handleMouseUp}
-      onMouseLeave={handleMouseLeave}
       onMouseMove={handleMouseMove}
     >
       <div
@@ -158,17 +132,19 @@ const ImageSlider = props => {
           transform: "translateX(0px)",
         }}
       >
-        {props.slides.map((slide, index) => {
-          return (
-            <div
-              className="slider_image_container"
-              key={index}
-              style={{ ...itemStyle }}
-            >
-              <img src={slide.image} alt="images" className="slider_image" />
-            </div>
-          )
-        })}
+        <div className="slider_animation">
+          {props.slides.map((slide, index) => {
+            return (
+              <div
+                className="slider_image_container"
+                key={index}
+                style={{ ...itemStyle }}
+              >
+                <img src={slide.image} alt="images" className="slider_image" />
+              </div>
+            )
+          })}
+        </div>
       </div>
     </div>
   )
