@@ -1,13 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Quantico&display=swap');
 
-$span_color_one: #FFEADB;
-$span_color_two: #679B9B;
-$header_color: #FF9A76;
 
-$background_color: #637373;
+$span_color_one: white;
+$span_color_two: #faf4d3;
+$header_color: #d1ac00;
 
+$background_color: #001427;
+
+/*FONT SIZES*/
 $font_400: 'Quantico', sans-serif;
 $font_size_span: 25px;
+$font_size_span_pop_up: 29px;
 $font_size_header: 80px;
 $font_size_title: 50px;
 
+$font_size_card_title: 26px;
+$font_size_card_span: 17px;
+
+$margin_size_child: 2rem;
+$margin_size_parent: 5rem;

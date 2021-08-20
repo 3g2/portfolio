@@ -1,5 +1,6 @@
 import React from "react"
 import Card from "../../utils/Card"
+import logo from "../../../images/hause_of_brands/hauseofbrands_logo2.png"
 
 import { hause_of_brands_images } from "../../Consts/SliderData"
 
@@ -8,8 +9,9 @@ const HauseOfBrands = () => {
     <div>
       <Card
         slides={hause_of_brands_images}
+        logo={logo}
         title="Hause of Brands"
-        date="2021"
+        snippet="Full-stack business web-app that automates the process of wholesale remarketing for vehicles."
         description=" Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever
         since the 1500s, when an unknown printer took a galley of type and
