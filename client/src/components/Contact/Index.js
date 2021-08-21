@@ -10,15 +10,10 @@ const Index = () => {
       <h1 className="header_title">Get In Touch</h1>
       <div>
         <div>
+          
+        </div>
+        <div>
           <Form_Template />
-        </div>
-        <div>
-          <h6 className="contact_text">OR</h6>
-        </div>
-        <div>
-          <a className="button_style_one" href="mailto:m.ashrahfi@gmail.com">
-            Send through your default email app
-          </a>
         </div>
       </div>
     </div>

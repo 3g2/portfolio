@@ -1,18 +1,66 @@
 @import '../base/variables';
 
-.form_child_container {
+.form {
     display: flex;
     flex-direction: column;
-    padding-bottom: 20px;
+    flex-wrap: wrap;
 }
 
-.form_label {
+.form_child_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.form_grandchild_container {
     padding-bottom: 15px;
+}
+
+.form_placement {
+    display: flex;
+    flex-direction: column;
+}
+
+.description_container {
+    width: 100%;
+}
+
+
+.form_label {
+    padding-bottom: 5px;
     color: $span_color_one;
+
 }
 
 .form_input {
-    color: $span_color_two;
+    color: black;
     min-width: 350px;
     min-height: 30px;
 }
+
+.form_button_group {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-bottom: 30px;
+}
+
+
+.form_button_group_child:nth-child(2) {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 40%;
+    right: 40%;
+}
+
+
+.form_span_option_text {
+    text-align: center;
+    color: $span_color_one;
+    font-size: 15px;
+    margin: 0;
+    margin-top: 17px;
+}
+
