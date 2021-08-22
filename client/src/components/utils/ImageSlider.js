@@ -17,9 +17,6 @@ const ImageSlider = props => {
 
   const sRef = React.createRef()
 
-  let slider = document.querySelector(".slider_container")
-  let slider_inner = document.querySelector(".slider_inner", null)
-
   const handleParseInt = el => {
     // extracting 20 from translateX(20px) and converting it to integer with parsInt
     return parseInt(el.replace("translateX(", "").replace("px)", ""), 10)

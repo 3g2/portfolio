@@ -8,9 +8,6 @@ import { AiFillCloseCircle } from "react-icons/ai"
 
 const Card = props => {
   const [pop_up_state, toggle_pop_up_state] = useState(false)
-  const pop_up = document.querySelector(".pop_up")
-  const close_pop_up = document.querySelector(".close_pop_up")
-  const open_pop_up = document.querySelector(".open_pop_up")
 
   return (
     <div className="card">
