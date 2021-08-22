@@ -1,11 +1,16 @@
 import React from "react"
-import { AnchorLink } from "gatsby-plugin-anchor-links"
+import { Link } from "gatsby"
+import resume_PDF from "../assets/files/resume_test.pdf"
+import { AiFillLinkedin } from "react-icons/ai"
+import { AiFillGithub } from "react-icons/ai"
 
 const Introduction = () => {
   //2DO: Navigate to connect section as user clicks on contact link
   return (
     <div className="introduction_container" id="introduction">
-      <h1 className="header_introduction_title">Hello, I'm Maher Halabi</h1>
+      <div>
+        <h1 className="header_introduction_title">Hello, I'm Maher Halabi</h1>
+      </div>
       <div>
         <p className="introduction_text">
           I am an aspiring software developer and a current computer science
@@ -13,10 +18,24 @@ const Introduction = () => {
           be made, used, and/or solve problems.
         </p>
       </div>
-      <div>
-        <AnchorLink className="button_style_one" to="/#projects">
-          My Projects
-        </AnchorLink>
+
+      <div className="introduction_button_container">
+        <a href={resume_PDF} download="Example_DOC" target="_blank">
+          <div className="">
+            <p className="introduction_button_span button_style_one">Resume</p>
+          </div>
+        </a>
+
+        <div className="introduction_icon_child">
+          <Link to="https://www.linkedin.com/in/maherhalabi/" target="_blank">
+            <AiFillLinkedin />
+          </Link>
+        </div>
+        <div className="introduction_icon_child">
+          <Link to="https://github.com/mohur" target="_blank">
+            <AiFillGithub />
+          </Link>
+        </div>
       </div>
     </div>
   )

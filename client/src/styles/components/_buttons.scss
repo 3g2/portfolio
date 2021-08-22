@@ -1,8 +1,32 @@
 @import "../base/variables";
 
 .button_style_one {
-    color: black;
-    font-size: $font_size_span;
-    padding: 10px;
-    background-color: white;
+	text-transform: uppercase;
+	text-decoration: none;
+    background: rgba(255, 255, 255, 0.1);;
+    border: none;
+	padding: 15px;
+	display: inline-block;
+	transition: all 0.4s ease 0s;
+    cursor: pointer;
+    font-size: 18px;
+    font: $font_400;
+    color: $icon_color;
+    text-decoration: none;
+    
+}
+
+.button_style_one:hover {
+    color: #ffffff !important;
+	background: $button_color;
+	border-color: $button_color !important;
+	transition: all 0.4s ease 0s;
+}
+
+.button_style_one:active {
+    -ms-transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);/*Move down*/
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*Reduce Shadow*/
+    border-bottom: none;
 }

@@ -1,0 +1,38 @@
+@import "../base/variables";
+
+.introduction_button_container {
+    display: flex;
+    align-items: baseline;
+}
+
+.introduction_button_container > div {
+    margin-right: 40px;
+}
+
+.introduction_button_container > a {
+    margin-right: 40px;
+}
+
+.introduction_button_child {
+    font-size: 30px;  
+    border: 2px solid black;
+    padding: 10px;
+}
+
+.introduction_button_child > a {
+    text-decoration: none;
+}
+
+.introduction_button_span {
+    margin: 0;
+}
+
+.introduction_icon_child {
+    font-size: 40px; 
+}
+
+.introduction_icon_child a {
+    vertical-align: sub;
+    vertical-align: -moz-middle-with-baseline;
+    color: $icon_color;
+}

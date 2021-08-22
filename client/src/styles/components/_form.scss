@@ -22,8 +22,16 @@
     flex-direction: column;
 }
 
+.form_placement textarea {
+    background-color: transparent;
+    font-family: $font_400;
+    border: .1px solid $span_color_one;
+    color: white;
+}
+
 .description_container {
     width: 100%;
+    
 }
 
 
@@ -34,9 +42,20 @@
 }
 
 .form_input {
-    color: black;
+    color: white;
     min-width: 350px;
     min-height: 30px;
+    background-color: transparent;
+    border: .1px solid $span_color_one;
+    font-family: $font_400;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: 3px solid $span_color_one;
+    transition: all 0.05s ease-in-out;
 }
 
 .form_button_group {
@@ -47,20 +66,12 @@
 }
 
 
-.form_button_group_child:nth-child(2) {
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    left: 40%;
-    right: 40%;
-}
-
-
 .form_span_option_text {
     text-align: center;
     color: $span_color_one;
     font-size: 15px;
     margin: 0;
     margin-top: 17px;
+    
 }
 

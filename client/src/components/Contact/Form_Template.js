@@ -99,17 +99,11 @@ const Form_Template = () => {
             </div>
 
             <div className="form_button_group_child">
-              <h6 className="form_span_option_text">
-                <i>OR</i>
-              </h6>
-            </div>
-
-            <div className="form_button_group_child">
               <a
                 className="button_style_one form_email_app_button"
                 href="mailto:m.ashrahfi@gmail.com"
               >
-                Default email app
+                open default email client
               </a>
             </div>
           </div>

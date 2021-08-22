@@ -14,29 +14,33 @@ const Card = props => {
 
   return (
     <div className="card">
-      <div className="card_child_container_one">
-        <div className="card_logo_container">
-          <img className="card_logo" src={props.logo} />
+      <div className="card_container">
+        <div className="card_child_container">
+          <div className="card_logo_container">
+            <img className="card_logo" src={props.logo} />
+          </div>
         </div>
 
-        <div className="card_grandchild_container">
+        <div className="card_child_container">
           <div className="card_title_container">
             <h2 className="card_title">{props.title}</h2>
           </div>
           <div className="card_snippet_container">
             <p className="card_snippet">{props.snippet}</p>
           </div>
+          <div>
+            <button
+              className="button_style_one"
+              onClick={() => {
+                toggle_pop_up_state(true)
+              }}
+            >
+              View
+            </button>
+          </div>
         </div>
       </div>
       <div>
-        <button
-          className="button_style_one"
-          onClick={() => {
-            toggle_pop_up_state(true)
-          }}
-        >
-          View
-        </button>
         <Popup
           pop_up_state={pop_up_state}
           toggle_pop_up_state={toggle_pop_up_state}
