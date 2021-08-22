@@ -41,6 +41,11 @@
 
 }
 
+label {
+    opacity: 0;
+    position: absolute;
+}
+
 .form_input {
     color: white;
     min-width: 350px;

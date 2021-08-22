@@ -29,8 +29,14 @@ const Form_Template = () => {
           <div className="form_child_container">
             <div class="form_grandchild_container">
               <div className="form_placement">
-                <label class="form_label">First Name</label>
-                <Field type="text" name="first_name" class="form_input" />
+                <div class="form_label">First Name</div>
+                <label>Phone Number</label>
+                <Field
+                  id="phone_number"
+                  type="text"
+                  name="first_name"
+                  class="form_input"
+                />
                 <div class="errors">
                   {errors.first_name && touched.first_name ? (
                     <div> {errors.first_name} </div>
@@ -40,8 +46,13 @@ const Form_Template = () => {
             </div>
             <div class="form_grandchild_container">
               <div className="form_placement">
-                <label class="form_label">Last Name</label>
-                <Field type="text" name="last_name" class="form_input" />
+                <div class="form_label">Last Name</div>
+                <Field
+                  id="email_address"
+                  type="text"
+                  name="last_name"
+                  class="form_input"
+                />
                 <div class="errors">
                   {errors.last_name && touched.last_name ? (
                     <div> {errors.last_name} </div>
@@ -54,8 +65,14 @@ const Form_Template = () => {
           <div className="form_child_container">
             <div class="form_grandchild_container">
               <div className="form_placement">
-                <label class="form_label">Email Address</label>
-                <Field type="email" name="email_address" class="form_input" />
+                <div class="form_label">Email Address</div>
+                <label>Phone Number</label>
+                <Field
+                  id="phone_number"
+                  type="email"
+                  name="email_address"
+                  class="form_input"
+                />
                 <div class="errors">
                   {errors.email_address && touched.email_address ? (
                     <div> {errors.email_address} </div>
@@ -65,10 +82,16 @@ const Form_Template = () => {
             </div>
             <div class="form_grandchild_container">
               <div className="form_placement">
-                <label class="form_label">
+                <div class="form_label">
+                  <label>Email Address</label>
                   Phone Number • <i class="optional">Optional</i>
-                </label>
-                <Field type="text" name="phone_number" class="form_input" />
+                </div>
+                <Field
+                  id="email_address"
+                  type="text"
+                  name="phone_number"
+                  class="form_input"
+                />
                 <div class="errors">
                   {errors.phone_number && touched.phone_number ? (
                     <div> {errors.phone_number} </div>

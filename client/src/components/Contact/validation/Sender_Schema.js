@@ -7,8 +7,16 @@ export let sender_schema = yup.object().shape({
     .string()
     .email("Email address is not valid.")
     .required("Email address is required."),
-  first_name: yup.string().required("First name is required."),
-  last_name: yup.string().required("Last name is required."),
+  first_name: yup
+    .string()
+    .matches(/^[A-Za-z ]*$/, "First name is not valid.")
+    .max(40)
+    .required("First name is required."),
+  last_name: yup
+    .string()
+    .matches(/^[A-Za-z ]*$/, "Last name is not valid.")
+    .max(40)
+    .required("Last name is required."),
   phone_number: yup
     .string()
     .matches(phoneRegExp, "Phone number is not valid")
