@@ -23,5 +23,11 @@ module.exports = {
         offset: -100,
       },
     },
+    {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: "maherhalabi.com",
+      },
+    },
   ],
 }

@@ -30,6 +30,7 @@ const HauseOfBrands = () => {
           "AWS",
           "Docker",
         ]}
+        link="https://www.hauseofbrands.com/"
       />
     </div>
   )

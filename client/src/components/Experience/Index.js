@@ -3,8 +3,7 @@ import HauseOfBrands from "./projects/HauseOfBrands"
 const Index = () => {
   return (
     <div className="projects_container" id="projects">
-      <h1 class="header_title">Projects</h1>
-
+      <h1 className="header_title">Projects</h1>
       <HauseOfBrands />
     </div>
   )

@@ -4,9 +4,9 @@ const Index = () => {
   const displayTechIcons = () => {}
   return (
     // <div className="about_container" id="about">
-    //   <h1 class="header_title">About</h1>
+    //   <h1 className="header_title">About</h1>
     //   <div>
-    //     <p class="about_text">
+    //     <p className="about_text">
     //       At first, I focused on becoming an architectural engineer. The idea of
     //       being able to develop and construct something that will someday be
     //       made, used, and inhabited was exciting and inspired me to pursue such
@@ -16,7 +16,7 @@ const Index = () => {
     //       after discovering a new element of creativity made me, later on, focus
     //       towards building my skill set for programming ever since.
     //     </p>
-    //     <p class="about_text">
+    //     <p className="about_text">
     //       The digital tools I have come across with through out my journey:
     //     </p>
     //   </div>

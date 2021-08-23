@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import resume_PDF from "../assets/files/resume_test.pdf"
 import { AiFillLinkedin } from "react-icons/ai"
 import { AiFillGithub } from "react-icons/ai"
@@ -32,18 +31,18 @@ const Introduction = () => {
         </a>
 
         <div className="introduction_icon_child">
-          <Link
-            to="https://www.linkedin.com/in/maherhalabi/"
+          <a
+            href="https://www.linkedin.com/in/maherhalabi/"
             rel="noreferrer"
             target="_blank"
           >
             <AiFillLinkedin />
-          </Link>
+          </a>
         </div>
         <div className="introduction_icon_child">
-          <Link to="https://github.com/mohur" rel="noreferrer" target="_blank">
+          <a href="https://github.com/mohur" rel="noreferrer" target="_blank">
             <AiFillGithub />
-          </Link>
+          </a>
         </div>
       </div>
     </div>
