@@ -14,7 +14,11 @@ const Card = props => {
       <div className="card_container">
         <div className="card_child_container">
           <div className="card_logo_container">
-            <img className="card_logo" src={props.logo} />
+            <img
+              className="card_logo"
+              src={props.logo}
+              alt="Hause of Brands Logo"
+            />
           </div>
         </div>
 
@@ -64,6 +68,7 @@ const Card = props => {
                   <Link
                     className="card_pop_up_link"
                     target="_blank"
+                    rel="noreferrer"
                     to="https://www.hauseofbrands.com/"
                   >
                     <BiLink />

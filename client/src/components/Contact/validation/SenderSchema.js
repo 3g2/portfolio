@@ -1,8 +1,7 @@
-import React from "react"
 import * as yup from "yup"
 
 const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
-export let sender_schema = yup.object().shape({
+export const senderSchema = yup.object().shape({
   email_address: yup
     .string()
     .email("Email address is not valid.")

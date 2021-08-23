@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react"
-import { AiFillLeftCircle, AiFillRightCircle } from "react-icons/ai"
+import React, { useState } from "react"
 
 const ImageSlider = props => {
   const [slider_props, set_slider_props] = useState({
@@ -116,6 +115,7 @@ const ImageSlider = props => {
 
   return (
     <div
+      aria-hidden="true"
       className="slider_container"
       ref={sRef}
       onMouseDown={handleMouseDown}
@@ -137,7 +137,11 @@ const ImageSlider = props => {
                 key={index}
                 style={{ ...itemStyle }}
               >
-                <img src={slide.image} alt="images" className="slider_image" />
+                <img
+                  src={slide.image}
+                  alt="Hause of brands images"
+                  className="slider_image"
+                />
               </div>
             )
           })}
@@ -148,18 +152,3 @@ const ImageSlider = props => {
 }
 
 export default ImageSlider
-
-/*  
-<div
-  className={index === current_img ? "slide active" : "slide"}
-  key={index}
-  >
-  {index === current_img && (
-  <img src={slide.image} alt="images" className="slider_image" />
-  )}
-</div>
-
-<AiFillLeftCircle onClick={prev_slide} className="slider_left_arrow" />
-<AiFillRightCircle onClick={next_slide} className="slider_right_arrow" />
-
-*/

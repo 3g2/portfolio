@@ -1,9 +1,9 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { Formik, Form, Field } from "formik"
-import { sendEmail } from "./Send_Email"
-import { sender_schema } from "./validation/Sender_Schema"
+import { sendEmail } from "./SendEmail"
+import { senderSchema } from "./validation/SenderSchema"
 
-const Form_Template = () => {
+const FormTemplate = () => {
   return (
     <Formik
       initialValues={{
@@ -13,7 +13,7 @@ const Form_Template = () => {
         phone_number: undefined,
         description: "",
       }}
-      validationSchema={sender_schema}
+      validationSchema={senderSchema}
       onSubmit={sender_data => {
         sendEmail(
           sender_data.email_address,
@@ -136,4 +136,4 @@ const Form_Template = () => {
   )
 }
 
-export default Form_Template
+export default FormTemplate
