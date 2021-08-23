@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import { Link } from "gatsby"
 import ImageSlider from "./ImageSlider"
 import Popup from "./Popup"
 
@@ -14,7 +13,11 @@ const Card = props => {
       <div className="card_container">
         <div className="card_child_container">
           <div className="card_logo_container">
-            <img className="card_logo" src={props.logo} />
+            <img
+              className="card_logo"
+              src={props.logo}
+              alt="Hause of Brands Logo"
+            />
           </div>
         </div>
 
@@ -61,13 +64,14 @@ const Card = props => {
                   <h2 className="card_pop_up_title">{props.title}</h2>
                 </div>
                 <div className="card_pop_up_link_container">
-                  <Link
+                  <a
                     className="card_pop_up_link"
                     target="_blank"
-                    to="https://www.hauseofbrands.com/"
+                    rel="noreferrer"
+                    href={props.link}
                   >
                     <BiLink />
-                  </Link>
+                  </a>
                 </div>
               </div>
               <div className="card_snippet_container">
@@ -76,8 +80,8 @@ const Card = props => {
               <div className="card_pop_up_technologies_container">
                 <div className="card_pop_up_technologies_title">Tech Used:</div>
                 <div className="card_pop_up_technologies">
-                  {props.technologies.map(technology => (
-                    <div className="card_pop_up_technologies_span">
+                  {props.technologies.map((technology, index) => (
+                    <div className="card_pop_up_technologies_span" key={index}>
                       {technology}
                     </div>
                   ))}

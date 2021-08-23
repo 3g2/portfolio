@@ -3,6 +3,10 @@ require("dotenv").config({
 })
 
 module.exports = {
+  pathPrefix: "/portfolio/client",
+}
+
+module.exports = {
   plugins: [
     `gatsby-plugin-sass`,
     {
@@ -17,6 +21,12 @@ module.exports = {
       resolve: "gatsby-plugin-anchor-links",
       options: {
         offset: -100,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: "maherhalabi.com",
       },
     },
   ],

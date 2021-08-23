@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import resume_PDF from "../assets/files/resume_test.pdf"
 import { AiFillLinkedin } from "react-icons/ai"
 import { AiFillGithub } from "react-icons/ai"
@@ -20,21 +19,30 @@ const Introduction = () => {
       </div>
 
       <div className="introduction_button_container">
-        <a href={resume_PDF} download="Example_DOC" target="_blank">
+        <a
+          href={resume_PDF}
+          download="Example_DOC"
+          rel="noreferrer"
+          target="_blank"
+        >
           <div className="">
             <p className="introduction_button_span button_style_one">Resume</p>
           </div>
         </a>
 
         <div className="introduction_icon_child">
-          <Link to="https://www.linkedin.com/in/maherhalabi/" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/maherhalabi/"
+            rel="noreferrer"
+            target="_blank"
+          >
             <AiFillLinkedin />
-          </Link>
+          </a>
         </div>
         <div className="introduction_icon_child">
-          <Link to="https://github.com/mohur" target="_blank">
+          <a href="https://github.com/mohur" rel="noreferrer" target="_blank">
             <AiFillGithub />
-          </Link>
+          </a>
         </div>
       </div>
     </div>
