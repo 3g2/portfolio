@@ -11,7 +11,10 @@
     
 }
 
-
+/*Query on Demand appearing after applying meta tag related to content-security-policy*/
+gatsby-qod {
+    display: none;
+}
 
 body {
     padding: 0px;
