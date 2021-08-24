@@ -31,4 +31,8 @@
     text-decoration: underline;
     margin-bottom: 40px;
     margin-top: 40px;
+    @include small {
+        min-height: 50px;
+        font-size: 50px;
+    }
 }
