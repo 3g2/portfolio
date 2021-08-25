@@ -10,19 +10,25 @@ const Index = () => {
 
         <meta
           http-equiv="Content-Security-Policy"
-          content="default-src 'self' https://api.emailjs.com/api/v1.0/email/send; object-src 'none';  style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;  img-src 'self' data: content:;"
+          content="
+            default-src 'self' https://api.emailjs.com/api/v1.0/email/send; 
+            object-src 'none';  
+            style-src 'self' https://fonts.googleapis.com; 
+            font-src 'self' https://fonts.gstatic.com;  
+            img-src 'self' data: content:;
+          "
         />
 
         <meta
           //DESCRIPTION
           name="description"
-          content="College student who College student who strives in improving on collaboration, problem
-          solving, and designing/implementing new programs and features."
+          content="College student who strives in improving on collaboration, problem
+          solving, and designing/implementing for programming and applications."
         />
 
         <meta name="keywords" content="" />
         <title>Maher Halabi - Software Engineer</title>
-        <link rel="canonical" href="http://mysite.com/example" />
+        <link rel="canonical" />
       </Helmet>
     </div>
   )
