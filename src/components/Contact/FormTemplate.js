@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react"
+import React, { useRef, useState } from "react"
 import { Formik, Form, Field } from "formik"
 import { sendEmail } from "./SendEmail"
 import { senderSchema } from "./validation/SenderSchema"
@@ -28,14 +28,28 @@ const FormTemplate = () => {
         phone_number: undefined,
         description: "",
       }}
-      // validationSchema={senderSchema}
+      validateOnMount={true}
+      validationSchema={senderSchema}
       onSubmit={sender_data => {
         handleSubmitData(sender_data)
       }}
     >
-      {({ errors, touched }) => (
+      {({ errors, touched, handleSubmit, isValid }) => (
         <div>
-          <Form className="form">
+          <Form
+            className="form"
+            onSubmit={e => {
+              {
+                e.preventDefault()
+                handleSubmit(e)
+                console.log(!isValid)
+                if (!isValid) {
+                  console.log("REACHE")
+                  return snack_bar_ref.current.show()
+                }
+              }
+            }}
+          >
             <div className="form_child_container">
               <div className="form_grandchild_container">
                 <div className="form_placement">
@@ -140,10 +154,10 @@ const FormTemplate = () => {
                 </a>
               </div>
             </div>
-
             <SnackBar
-              message="Thank you for getting in touch"
+              message={isValid ? "Sent!" : "Form includes errors"}
               ref={snack_bar_ref}
+              isValid={isValid}
             />
           </Form>
         </div>

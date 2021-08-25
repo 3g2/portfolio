@@ -1,31 +1,46 @@
+@import '../base/mixins';
+
 .snackbar {
     position: fixed;
-    width: 350px;
+    width: 600px;
     display: flex;
     text-align: center;
     color: white;
-    background-color: #00F593;
     left: 0;
     transform: translate(calc(50vw - 50%));
-    padding: 20px
-
+    padding: 20px;
+    justify-content: center;
+    @include small {
+        width: 350px;
+    }
 }
 
 .snackbar .icon {
-    flex: 20%;
     font-size: 40px;
+    padding-right: 40px;
+    @include small {
+        flex: 20%;
+        font-size: 30px;
+    }
 }
 
 .snackbar .icon > svg {
-    width: 100%;
-    height: 100%;
+    width: 75px;
+    height: 75px;
+    @include small {
+        width: 100%;
+        height: 100%;
+    }
 }
 
 .snackbar .message {
-    flex: 80%;
     text-align: center;
-    font-size: 18px;
+    font-size: 30px;
     align-self: center;
+    @include small {
+        flex: 80%;
+        font-size: 23px;
+    }
 }
 
 #show_snack_bar {
@@ -57,6 +72,5 @@
     100% {
         top: 0;
         opacity: 0;
-        display: none;
     }
 }
