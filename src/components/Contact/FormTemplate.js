@@ -1,9 +1,24 @@
-import React from "react"
+import React, { useEffect, useRef } from "react"
 import { Formik, Form, Field } from "formik"
 import { sendEmail } from "./SendEmail"
 import { senderSchema } from "./validation/SenderSchema"
+import SnackBar from "./SnackBar"
 
 const FormTemplate = () => {
+  const snack_bar_ref = useRef(null)
+
+  const handleSubmitData = sender_data => {
+    // sendEmail(
+    //   sender_data.email_address,
+    //   sender_data.first_name,
+    //   sender_data.last_name,
+    //   sender_data.phone_number,
+    //   sender_data.description
+    // )
+    // document.querySelector(".send_button").setAttribute("disabled", "disabled")
+    snack_bar_ref.current.show()
+  }
+
   return (
     <Formik
       initialValues={{
@@ -13,15 +28,9 @@ const FormTemplate = () => {
         phone_number: undefined,
         description: "",
       }}
-      validationSchema={senderSchema}
+      // validationSchema={senderSchema}
       onSubmit={sender_data => {
-        sendEmail(
-          sender_data.email_address,
-          sender_data.first_name,
-          sender_data.last_name,
-          sender_data.phone_number,
-          sender_data.description
-        )
+        handleSubmitData(sender_data)
       }}
     >
       {({ errors, touched }) => (
@@ -116,7 +125,7 @@ const FormTemplate = () => {
             <div className="form_button_group">
               <div className="form_button_group_child">
                 <input
-                  className="button_style_one"
+                  className="button_style_one send_button"
                   value="Send"
                   type="submit"
                 />
@@ -131,6 +140,11 @@ const FormTemplate = () => {
                 </a>
               </div>
             </div>
+
+            <SnackBar
+              message="Thank you for getting in touch"
+              ref={snack_bar_ref}
+            />
           </Form>
         </div>
       )}

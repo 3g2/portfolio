@@ -1,0 +1,62 @@
+.snackbar {
+    position: fixed;
+    width: 350px;
+    display: flex;
+    text-align: center;
+    color: white;
+    background-color: #00F593;
+    left: 0;
+    transform: translate(calc(50vw - 50%));
+    padding: 20px
+
+}
+
+.snackbar .icon {
+    flex: 20%;
+    font-size: 40px;
+}
+
+.snackbar .icon > svg {
+    width: 100%;
+    height: 100%;
+}
+
+.snackbar .message {
+    flex: 80%;
+    text-align: center;
+    font-size: 18px;
+    align-self: center;
+}
+
+#show_snack_bar {
+    visibility: visible;
+    animation: fadeIn 0.3s, fadeOut 0.5s 2.5s;
+    animation-fill-mode: forwards;
+}
+
+#hide_snack_bar {
+    visibility: hidden;
+}
+
+@keyframes fadeIn {
+    0% {
+        top: 0;
+        opacity: 0;
+    }
+    100% {
+        top: 50px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        top: 50px;
+        opacity: 1;
+        }
+    100% {
+        top: 0;
+        opacity: 0;
+        display: none;
+    }
+}
