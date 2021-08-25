@@ -1,0 +1,76 @@
+@import '../base/mixins';
+
+.snackbar {
+    position: fixed;
+    width: 600px;
+    display: flex;
+    text-align: center;
+    color: white;
+    left: 0;
+    transform: translate(calc(50vw - 50%));
+    padding: 20px;
+    justify-content: center;
+    @include small {
+        width: 350px;
+    }
+}
+
+.snackbar .icon {
+    font-size: 40px;
+    padding-right: 40px;
+    @include small {
+        flex: 20%;
+        font-size: 30px;
+    }
+}
+
+.snackbar .icon > svg {
+    width: 75px;
+    height: 75px;
+    @include small {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.snackbar .message {
+    text-align: center;
+    font-size: 30px;
+    align-self: center;
+    @include small {
+        flex: 80%;
+        font-size: 23px;
+    }
+}
+
+#show_snack_bar {
+    visibility: visible;
+    animation: fadeIn 0.3s, fadeOut 0.5s 2.5s;
+    animation-fill-mode: forwards;
+}
+
+#hide_snack_bar {
+    visibility: hidden;
+}
+
+@keyframes fadeIn {
+    0% {
+        top: 0;
+        opacity: 0;
+    }
+    100% {
+        top: 50px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        top: 50px;
+        opacity: 1;
+        }
+    100% {
+        top: 0;
+        opacity: 0;
+    }
+}

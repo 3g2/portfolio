@@ -6,14 +6,16 @@
 .root {
     background: $background_color;
     font-family: $font_400;
-    margin: 0px;
-    padding: 0px;
-    
+    min-height: 100vh;
 }
 
-
+/*Query on Demand appearing after applying meta tag related to content-security-policy*/
+gatsby-qod {
+    display: none;
+}
 
 body {
     padding: 0px;
     margin: 0px;
+    position: relative;
 }
