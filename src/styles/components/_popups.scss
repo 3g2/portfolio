@@ -1,4 +1,5 @@
 @import "../base/variables";
+@import "../base/mixins";
 
 .pop_up {
     position: fixed;
@@ -16,7 +17,6 @@
     align-items: center;
     color: $span_color_one;
     transition: height .4s, opacity 0.45s, visibility 1.5s;
-   
 }
 
 .pop_up_inner {
@@ -25,7 +25,10 @@
     width: 80vw;
     overflow: scroll;
     background-color: rgba(46, 49, 49, .995);
-   
+    @include small {
+        width: 100vw;
+        padding: 20px;
+    }
 }
 
 .close_pop_up_icon {
@@ -34,6 +37,13 @@
     color: $icon_color;
     border: none;
     cursor: pointer;
+    @include small {
+        font-size: 70px;
+        color: $icon_color;
+        position: fixed;
+        right: 0;
+        z-index: 9;
+    }
 }
 
 .open_pop_up {

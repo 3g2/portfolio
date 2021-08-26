@@ -25,7 +25,7 @@ const Introduction = () => {
           rel="noreferrer"
           target="_blank"
         >
-          <div className="">
+          <div className="introduction_button_span_container">
             <p className="introduction_button_span button_style_one">Resume</p>
           </div>
         </a>

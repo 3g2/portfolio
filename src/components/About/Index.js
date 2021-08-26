@@ -1,4 +1,4 @@
-import Technologies from "./Technologies"
+import Technologies from "../Experience/Technologies"
 
 const Index = () => {
   const displayTechIcons = () => {}
