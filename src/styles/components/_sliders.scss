@@ -19,6 +19,11 @@ $percentage: 100 / $slides-number;
     padding: 40px;
     border-radius: 30px;
     transform: translate3d(0, 0, 0);
+    z-index: 5;
+    @include small {
+      padding: 20px;
+      overflow-x: scroll;
+    }
    
   }
 
@@ -44,7 +49,10 @@ $percentage: 100 / $slides-number;
 }
 
 .slider_image_container {
-  
+  @include small {
+    width: 200px;
+    height: 200px;
+  }
 }
 
 .slider_image {
