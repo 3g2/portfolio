@@ -150,13 +150,16 @@
     @include small {
         flex-direction: column;
         padding: 15px;
+        padding-top: 110px;
     }
 }
 
 .card_pop_up_header_child {
     display: flex;
-
     flex-direction: column;
+    @include small {
+        width: 100%;
+    }
 }
 
 .card_pop_up_title {
@@ -164,14 +167,16 @@
     font-size: $font_size_title;
     padding: 0px;
     margin: 0px;
+  
 }
 
 .card_pop_up_description {
  font-size: $font_size_span_pop_up;
  color: $span_color_one;
+ padding: 30px;
  @include small {
     font-size: 20px;
-    padding: 20px;
+    padding: 40px;
     text-align: center;
   }
 }
@@ -186,7 +191,9 @@
 .card_pop_up_technologies_title { 
     color: $header_color;
     font-size: $font_size_card_title;
-}
+} 
+
+
 
 .card_pop_up_technologies {
     color: $span_color_two;

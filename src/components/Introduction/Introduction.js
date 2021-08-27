@@ -2,6 +2,7 @@ import React from "react"
 import resume_PDF from "../assets/files/resume_test.pdf"
 import { AiFillLinkedin } from "react-icons/ai"
 import { AiFillGithub } from "react-icons/ai"
+import Technologies from "./Technologies"
 
 const Introduction = () => {
   //2DO: Navigate to connect section as user clicks on contact link
@@ -45,6 +46,7 @@ const Introduction = () => {
           </a>
         </div>
       </div>
+      <Technologies />
     </div>
   )
 }
