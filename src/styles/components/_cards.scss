@@ -150,6 +150,7 @@
     @include small {
         flex-direction: column;
         padding: 15px;
+        padding-top: 110px;
     }
 }
 
@@ -172,6 +173,7 @@
 .card_pop_up_description {
  font-size: $font_size_span_pop_up;
  color: $span_color_one;
+ padding: 30px;
  @include small {
     font-size: 20px;
     padding: 40px;
