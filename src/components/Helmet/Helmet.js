@@ -13,8 +13,8 @@ const Metadata = () => {
           content="
             default-src 'self'; 
             object-src 'none';  
-            style-src 'self' https://fonts.googleapis.com/;
-            font-src 'self' https://fonts.gstatic.com/;
+            style-src 'self' fonts.googleapis.com/;
+            font-src 'self' fonts.gstatic.com/;
             img-src 'self' data: content:;
             frame-ancestors 'self';
             frame-src 'none';
