@@ -15,7 +15,7 @@ const SnackBar = forwardRef((props, ref) => {
       set_show_snack_bar(true)
       setTimeout(() => {
         set_show_snack_bar(false)
-      }, 3000)
+      }, 120000)
     },
   }))
   return (
