@@ -13,7 +13,7 @@ const Metadata = () => {
           content="
             default-src 'self'; 
             object-src 'none';  
-            style-src 'self' https://fonts.googleapis.com/ 'unsafe-inline';
+            style-src 'self' https://fonts.googleapis.com/;
             font-src 'self' https://fonts.gstatic.com/;
             img-src 'self' data: content:;
             frame-ancestors 'self';
@@ -21,7 +21,7 @@ const Metadata = () => {
             child-src 'none';
             worker-src 'none';
             script-src 'sha256-egpbluqkD8NT0bY3bWy7raM9tRIMkfUWboq0Y8KqsFk=';
-            upgrade-insecure-requests 'upgrade-insecure-requests';
+            upgrade-insecure-requests;
           "
         />
         <meta
