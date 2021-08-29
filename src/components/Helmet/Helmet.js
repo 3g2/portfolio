@@ -20,7 +20,7 @@ const Metadata = () => {
             frame-src 'none';
             child-src 'none';
             worker-src 'none';
-            script-src 'sha256-egpbluqkD8NT0bY3bWy7raM9tRIMkfUWboq0Y8KqsFk=';
+            script-src 'https://maherhalabi.com';
             upgrade-insecure-requests;
           "
         />
