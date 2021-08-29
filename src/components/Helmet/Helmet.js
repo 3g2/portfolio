@@ -11,11 +11,17 @@ const Metadata = () => {
         <meta
           http-equiv="Content-Security-Policy"
           content="
-            default-src 'self' https://api.emailjs.com/api/v1.0/email/send; 
+            default-src 'self'; 
             object-src 'none';  
-            style-src 'self' https://fonts.googleapis.com; 
-            font-src 'self' https://fonts.gstatic.com;  
+            style-src 'self' https://fonts.googleapis.com/ 'unsafe-inline';
+            font-src 'self' https://fonts.gstatic.com/;
             img-src 'self' data: content:;
+            frame-ancestors 'self';
+            frame-src 'none';
+            child-src 'none';
+            worker-src 'none';
+            script-src 'sha256-egpbluqkD8NT0bY3bWy7raM9tRIMkfUWboq0Y8KqsFk=';
+            upgrade-insecure-requests 'upgrade-insecure-requests';
           "
         />
         <meta
