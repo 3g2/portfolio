@@ -11,10 +11,10 @@ const Metadata = () => {
         <meta
           http-equiv="Content-Security-Policy"
           content="
-            default-src 'self'; 
+            default-src 'self';
             object-src 'none';  
-            style-src 'self' fonts.googleapis.com/;
-            font-src 'self' fonts.gstatic.com/;
+            style-src 'self' https://fonts.googleapis.com/ 'unsafe-inline';
+            font-src 'self' https://fonts.gstatic.com/;
             img-src 'self' data: content:;
             frame-ancestors 'self';
             frame-src 'none';
