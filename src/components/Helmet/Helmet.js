@@ -16,7 +16,6 @@ const Metadata = () => {
             style-src 'self' fonts.googleapis.com 'unsafe-inline';
             font-src fonts.gstatic.com;
             img-src 'self' data: content:;
-            script-src 'self';
           "
         />
         <meta
