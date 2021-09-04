@@ -3,7 +3,6 @@ import {
   SiJavascript,
   SiDocker,
   SiReact,
-  SiCss3,
   SiSass,
   SiNodeDotJs,
   SiMongodb,
@@ -14,37 +13,38 @@ import {
   SiYarn,
   SiGithub,
 } from "react-icons/si"
+import { FaCss3 } from "react-icons/fa"
 
 const Technologies = () => {
   const TECH_ICON_SIZE = 65
 
   const tech_list_object = [
-    { icon: <SiJavascript />, span: "Javascript" },
-    { icon: <SiDocker />, span: "Docker" },
-    { icon: <SiReact />, span: "React" },
-    { icon: <SiCss3 />, span: "CSS3" },
-    { icon: <SiSass />, span: "Sass" },
-    { icon: <SiNodeDotJs />, span: "NodeJS" },
-    { icon: <SiMongodb />, span: "MongoDB" },
-    { icon: <SiHtml5 />, span: "HTML5" },
-    { icon: <SiAmazonaws />, span: "AWS" },
-    { icon: <SiMaterialUi />, span: "Material UI" },
-    { icon: <SiBootstrap />, span: "Bootstrap" },
-    { icon: <SiYarn />, span: "Yarn" },
-    { icon: <SiGithub />, span: "Github" },
-    { icon: <SiJavascript />, span: "Javascript" },
-    { icon: <SiDocker />, span: "Docker" },
-    { icon: <SiReact />, span: "React" },
-    { icon: <SiCss3 />, span: "CSS3" },
-    { icon: <SiSass />, span: "Sass" },
-    { icon: <SiNodeDotJs />, span: "NodeJS" },
-    { icon: <SiMongodb />, span: "MongoDB" },
-    { icon: <SiHtml5 />, span: "HTML5" },
-    { icon: <SiAmazonaws />, span: "AWS" },
-    { icon: <SiMaterialUi />, span: "Material UI" },
-    { icon: <SiBootstrap />, span: "Bootstrap" },
-    { icon: <SiYarn />, span: "Yarn" },
-    { icon: <SiGithub />, span: "Github" },
+    { icon: <SiJavascript />, span: "Javascript", className: "Javascript" },
+    { icon: <SiDocker />, span: "Docker", className: "Docker" },
+    { icon: <SiHtml5 />, span: "HTML5", className: "HTML5" },
+    { icon: <SiReact />, span: "React", className: "React" },
+    { icon: <SiSass />, span: "Sass", className: "Sass" },
+    { icon: <SiNodeDotJs />, span: "NodeJS", className: "NodeJS" },
+    { icon: <SiGithub />, span: "Github", className: "Github" },
+    { icon: <SiMongodb />, span: "MongoDB", className: "MongoDB" },
+    { icon: <FaCss3 />, span: "CSS3", className: "CSS3" },
+    { icon: <SiAmazonaws />, span: "AWS", className: "AWS" },
+    { icon: <SiMaterialUi />, span: "Material UI", className: "MaterialUI" },
+    { icon: <SiBootstrap />, span: "Bootstrap", className: "Bootstrap" },
+    { icon: <SiYarn />, span: "Yarn", className: "Yarn" },
+    { icon: <SiJavascript />, span: "Javascript", className: "Javascript" },
+    { icon: <SiDocker />, span: "Docker", className: "Docker" },
+    { icon: <SiHtml5 />, span: "HTML5", className: "HTML5" },
+    { icon: <SiReact />, span: "React", className: "React" },
+    { icon: <SiSass />, span: "Sass", className: "Sass" },
+    { icon: <SiNodeDotJs />, span: "NodeJS", className: "NodeJS" },
+    { icon: <SiGithub />, span: "Github", className: "Github" },
+    { icon: <SiMongodb />, span: "MongoDB", className: "MongoDB" },
+    { icon: <FaCss3 />, span: "CSS3", className: "CSS3" },
+    { icon: <SiAmazonaws />, span: "AWS", className: "AWS" },
+    { icon: <SiMaterialUi />, span: "Material UI", className: "MaterialUI" },
+    { icon: <SiBootstrap />, span: "Bootstrap", className: "Bootstrap" },
+    { icon: <SiYarn />, span: "Yarn", className: "Yarn" },
   ]
 
   return (
@@ -57,7 +57,11 @@ const Technologies = () => {
                 return (
                   <div className="tech_icons_section" key={index}>
                     <div className="tech_icons_container">
-                      <div className="tech_icons">{tech_item.icon}</div>
+                      <div className="tech_icons">
+                        <div className={tech_item.className}>
+                          {tech_item.icon}
+                        </div>
+                      </div>
                       <div className="span">{tech_item.span}</div>
                     </div>
                   </div>

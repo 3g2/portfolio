@@ -12,15 +12,13 @@ const HauseOfBrands = () => {
         logo={logo}
         title="Hause of Brands"
         snippet="Full-stack business web-app that automates the process of wholesale remarketing for vehicles."
-        description=" Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book. It has survived not only
-        five centuries, but also the leap into electronic typesetting,
-        remaining essentially unchanged. It was popularised in the 1960s with
-        the release of Letraset sheets containing Lorem Ipsum passages, and
-        more recently with desktop publishing software like Aldus PageMaker
-        including versions of Lorem Ipsum."
+        description="When it comes to dealerships selling vehicles at auctions, they often take the route of 
+                     paying a service to an intermediary to do the job for them. The process in where the 
+                     intermediary sells the vehicle for the dealership often does not involve a web-application. 
+                     That is until one intermediary had a vision in gathering dealerships to one web-app and 
+                     wanted to autmate the process of exchanging data between admin and user (dealerships) in 
+                     order to maximize work effeciency. This web-app brings the vision of the intermediary to life.
+                    "
         technologies={[
           "MongoDB",
           "Express",

@@ -13,22 +13,17 @@ const Metadata = () => {
           content="
             default-src 'self';
             object-src 'none';  
-            style-src 'self' https://fonts.googleapis.com/ 'unsafe-inline';
-            font-src 'self' https://fonts.gstatic.com/;
+            style-src 'self' fonts.googleapis.com 'unsafe-inline';
+            font-src fonts.gstatic.com;
             img-src 'self' data: content:;
-            frame-ancestors 'self';
-            frame-src 'none';
-            child-src 'none';
-            worker-src 'none';
-            script-src 'self';
-            upgrade-insecure-requests;
           "
         />
         <meta
           //DESCRIPTION
           name="description"
-          content="College student who strives in improving on collaboration, problem
-          solving, and designing/implementing for programming and applications."
+          content="Software developer and college student, with a passion for developing
+          applications and solutions, that will help your business accelerate
+          its growth and surpass the competition."
         />
         <meta name="keywords" content="" />
         <title>Maher Halabi - Software Engineer</title>
