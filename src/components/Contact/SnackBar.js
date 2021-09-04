@@ -15,13 +15,13 @@ const SnackBar = forwardRef((props, ref) => {
       set_show_snack_bar(true)
       setTimeout(() => {
         set_show_snack_bar(false)
-      }, 120000)
+      }, 3000)
     },
   }))
   return (
     <div
       className="snackbar"
-      style={{ backgroundColor: props.isValid ? "#00F593" : "#FF0033" }}
+      style={{ backgroundColor: props.isValid ? "#00F593" : "orange" }}
       id={show_snack_bar ? "show_snack_bar" : "hide_snack_bar"}
     >
       <div className="icon">

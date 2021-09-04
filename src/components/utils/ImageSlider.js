@@ -17,6 +17,19 @@ const ImageSlider = props => {
     },
   }
 
+  const CustomDot = ({ onMove, index, onClick, active }) => {
+    // onMove means if dragging or swiping in progress.
+    // active is provided by this lib for checking if the item is active or not.
+    return (
+      <li
+        className={active ? "slider_image active" : "slider_dot inactive"}
+        onClick={() => onClick()}
+      >
+        {index + 1}
+      </li>
+    )
+  }
+
   return (
     <Carousel
       swipeable={true}

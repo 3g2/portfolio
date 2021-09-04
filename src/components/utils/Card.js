@@ -30,7 +30,7 @@ const Card = props => {
           </div>
           <div>
             <button
-              className="button_style_one"
+              className="button_style_one card_button"
               onClick={() => {
                 toggle_pop_up_state(true)
               }}

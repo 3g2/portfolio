@@ -13,9 +13,9 @@ const Introduction = () => {
       </div>
       <div>
         <p className="introduction_text">
-          I am an aspiring software developer and a current computer science
-          student with a passion for developing applications that will someday
-          be made, used, and/or solve problems.
+          I am a professional software developer, with a passion for developing
+          applications and solutions, that will help your business accelerate
+          its growth and surpass the competition.
         </p>
       </div>
 

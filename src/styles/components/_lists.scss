@@ -49,8 +49,48 @@
 			animation: translateinfinite 40s linear infinite;
 			.tech_icons {
 				font-size:65px;
-                color: white;
+				.Javascript {
+					color: #f0db4f
+				}
+				.Docker {
+					color: #0db7ed
+				}
+				.React {
+					color: #61dbfb
+				}
+				.CSS3 {
+					color: #2965F1
+				}
+				.Sass {
+					color: #C76494
+				}
+				.NodeJS {
+					color: #22AE5A
+				}
+				.MongoDB {
+					color: #108D4D
+				}
+				.HTML5 {
+					color: #DD4B25
+				}
+				.AWS {
+					color: #EE8910
+				}
+				.MaterialUI {
+					color: #007DC5
+				}
+				.Bootstrap {
+					color: #583E80
+				}
+				.Yarn {
+					color: #348BB3
+				}
+				.Github {
+					color: white;
+				}
+
 			}
+			
 		}
 	}
 }

@@ -81,9 +81,10 @@
     padding: 0px;
     margin: 0px;
     padding-bottom: 20px;
+    text-align: center;
     @include small {
         font-size: 30px;
-        text-align: center;
+ 
         padding-bottom: 10px;
         padding-top: 10px;
     }
@@ -100,121 +101,19 @@
     color: $span_color_one;
     font-size: $font_size_card_span;
     padding: 0px;
+    text-align: center;
     margin: 0px;
     @include small {
         font-size: 15px;
-        text-align: center;
+    
         padding-bottom: 20px;
     }
 }
 
+.card_button {
+    width: 100%;
+}
 .card_date {
     color: $header_color;
     text-align: end;
-}
-
-/*POPUP*/
-
-.card_pop_up_toolbar {
-    display: flex;
-    justify-content: end;
-}
-
-.card_pop_up_title_container {
-    display: flex;
-    flex-direction: row;
-    @include small {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-     }
-}
-
-.card_pop_up_link {
-    font-size: 50px;
-    justify-content: center;
-    color: $icon_color;
-    @include small {
-        font-size: 30px;
-        justify-content: center;
-        color: $icon_color;
-    }
-}
-
-.card_pop_up_header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: end;
-    padding: 30px;
-    @include small {
-        flex-direction: column;
-        padding: 15px;
-        padding-top: 110px;
-    }
-}
-
-.card_pop_up_header_child {
-    display: flex;
-    flex-direction: column;
-    @include small {
-        width: 100%;
-    }
-}
-
-.card_pop_up_title {
-    color: $header_color;
-    font-size: $font_size_title;
-    padding: 0px;
-    margin: 0px;
-  
-}
-
-.card_pop_up_description {
- font-size: $font_size_span_pop_up;
- color: $span_color_one;
- padding: 30px;
- @include small {
-    font-size: 20px;
-    padding: 40px;
-    text-align: center;
-  }
-}
-
-.card_pop_up_technologies_container {
-    margin-top: $margin_size_child;
-    @include small {
-        text-align: center;
-    }
-}
-
-.card_pop_up_technologies_title { 
-    color: $header_color;
-    font-size: $font_size_card_title;
-} 
-
-
-
-.card_pop_up_technologies {
-    color: $span_color_two;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 1rem;
-    @include small {
-        text-align: center;
-    }
-}
-
-.card_pop_up_technologies_span {
-    padding: 15px;
-    margin-right: 10px;
-    background-color: rgba(255, 255, 255, 0.1);
-    font-size: $font_size_card_span;
-    color: $span_color_one;
-    @include small {
-        text-align: center;
-        padding: 10px;
-        margin: 10px;
-        flex: 10%
-    }
 }
