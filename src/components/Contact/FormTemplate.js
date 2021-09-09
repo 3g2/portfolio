@@ -8,14 +8,14 @@ const FormTemplate = () => {
   const snack_bar_ref = useRef(null)
 
   const handleSubmitData = sender_data => {
-    // sendEmail(
-    //   sender_data.email_address,
-    //   sender_data.first_name,
-    //   sender_data.last_name,
-    //   sender_data.phone_number,
-    //   sender_data.description
-    // )
-    // document.querySelector(".send_button").setAttribute("disabled", "disabled")
+    sendEmail(
+      sender_data.email_address,
+      sender_data.first_name,
+      sender_data.last_name,
+      sender_data.phone_number,
+      sender_data.description
+    )
+    document.querySelector(".send_button").setAttribute("disabled", "disabled")
     snack_bar_ref.current.show()
   }
 
