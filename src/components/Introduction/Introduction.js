@@ -1,5 +1,5 @@
 import React from "react"
-import resume_PDF from "../assets/files/resume_test.pdf"
+import resume_PDF from "../assets/files/Maher_Halabi.pdf"
 import { AiFillLinkedin } from "react-icons/ai"
 import { AiFillGithub } from "react-icons/ai"
 import Technologies from "./Technologies"
@@ -41,7 +41,7 @@ const Introduction = () => {
           </a>
         </div>
         <div className="introduction_icon_child">
-          <a href="https://github.com/mohur" rel="noreferrer" target="_blank">
+          <a href="https://github.com/3g2" rel="noreferrer" target="_blank">
             <AiFillGithub />
           </a>
         </div>

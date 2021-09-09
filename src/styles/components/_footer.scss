@@ -1,0 +1,63 @@
+@import "../base/variables";
+@import "../base/mixins";
+
+.footer_container {
+    padding: 50px;
+    padding-top: 0px;
+    width: 50%;
+    margin: 0 auto;
+    @include small {
+        font-size: 15px;
+        width: 100%;
+        margin: 0;
+        padding-top: 0px;
+        padding-bottom: 50px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+}
+
+.footer_link {
+    text-decoration: none;
+    @include small {
+        text-decoration: underline;
+        text-decoration-color: $header_color;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 5px;
+    }
+}
+
+.footer_body {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    text-transform: uppercase;
+    -webkit-appearance: none;
+	text-decoration: none;
+    border: none;
+	transition: all 0.4s ease 0s;
+    cursor: pointer;
+    font: $font_400;
+    color: $button_color;
+    padding: 10px;
+    transition: .5s all;
+}
+
+.footer_body:hover {
+    color: $span_color_one
+}
+
+.footer_body:active {
+    transform: scale(.85);
+  }
+  
+
+.footer_item {
+    margin-right: 5px;
+}
+
+.footer_item svg {
+    width: 25px;
+    height: 25px;
+}
