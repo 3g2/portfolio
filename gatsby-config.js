@@ -6,12 +6,13 @@ module.exports = {
   pathPrefix: "/portfolio/client",
   plugins: [
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingId: "G-FTKGTLMF3K",
-        head: true,
-        anonymize: true,
-      },
+        trackingIds: [process.env.GATSBY_GOOGLE_TRACKING_ID],
+        pluginConfig: {
+          head: true,
+          anonymize_ip: true,
+        },
       },
     },
     `gatsby-plugin-react-helmet`,
