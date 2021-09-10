@@ -5,8 +5,18 @@ require("dotenv").config({
 module.exports = {
   pathPrefix: "/portfolio/client",
   plugins: [
-    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [process.env.GATSBY_GOOGLE_TRACKING_ID],
+        pluginConfig: {
+          head: true,
+          anonymize_ip: true,
+        },
+      },
+    },
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sass`,
     {
       resolve: "gatsby-plugin-anchor-links",
       options: {
