@@ -1,5 +1,5 @@
 import React from "react"
-import resume_PDF from "../assets/files/Maher_Halabi.pdf"
+import resume_PDF from "../assets/files/Maher_Halabi_Resume.pdf"
 import { AiFillLinkedin } from "react-icons/ai"
 import { AiFillGithub } from "react-icons/ai"
 import Technologies from "./Technologies"
@@ -22,7 +22,7 @@ const Introduction = () => {
       <div className="introduction_button_container">
         <a
           href={resume_PDF}
-          download="Example_DOC"
+          download="Maher_Halabi_Resume"
           rel="noreferrer"
           target="_blank"
         >
