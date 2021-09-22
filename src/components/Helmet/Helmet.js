@@ -31,33 +31,4 @@ const Metadata = () => {
   )
 }
 
-// const Metadata = ({ title, description, url, charset }) => {
-//   const data = useStaticQuery(
-//     graphql`
-//       query {
-//         site {
-//           siteMetadata {
-//             charset
-//             title
-//             description
-//             url
-//           }
-//         }
-//       }
-//     `
-//   )
-//   const metaTitle = title
-//   const metaDescription = description
-//   const metaUrl = url
-//   const metaCharset = charset
-//   return (
-//     <Helmet>
-//       <title>{`${metaTitle}`}</title>
-//       <meta name="description" content={metaDescription} />
-//       <meta name="url" content={metaUrl} />
-//       <meta charset={metaCharset} />
-//     </Helmet>
-//   )
-// }
-
 export default Metadata
