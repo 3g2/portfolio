@@ -5,10 +5,6 @@ const merge = require("webpack-merge")
 
 module.exports = {
   pathPrefix: "/portfolio/client",
-  siteMetadata: {
-    siteUrl: "https://www.maherhalabi.com",
-    title: "Maher Halabi - Software Engineer",
-  },
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
