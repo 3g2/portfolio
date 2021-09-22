@@ -9,6 +9,7 @@ module.exports = {
     title: "Maher Halabi - Software Engineer",
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
@@ -24,7 +25,6 @@ module.exports = {
         },
       },
     },
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     {
       resolve: "gatsby-plugin-anchor-links",
