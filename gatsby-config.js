@@ -4,16 +4,11 @@ require("dotenv").config({
 module.exports = {
   pathPrefix: "/portfolio/client",
   plugins: [
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
-        // You can add multiple tracking ids and a pageview event will be fired for all of them.
-        trackingIds: [
-          "G-9EP8W5EB0H", // Google Analytics / GA
-        ],
-        gtagConfig: {
-          anonymize_ip: true,
-        },
+        trackingIds: "G-9EP8W5EB0H",
         pluginConfig: {
           head: true,
         },
