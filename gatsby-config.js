@@ -1,12 +1,9 @@
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
-const merge = require("webpack-merge")
-
 module.exports = {
   pathPrefix: "/portfolio/client",
   plugins: [
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
@@ -22,6 +19,7 @@ module.exports = {
         },
       },
     },
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     {
       resolve: "gatsby-plugin-anchor-links",
