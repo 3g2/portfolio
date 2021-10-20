@@ -1,12 +1,13 @@
-import emailjs from "emailjs-com"
+import emailjs, { init } from "emailjs-com"
 
-export const sendEmail = (
+export const sendEmail = async (
   email_address,
   first_name,
   last_name,
   phone_number,
   description
 ) => {
+  init(process.env.GATSBY_EMAILJS_USER_ID)
   const template_params = {
     email_address: email_address,
     first_name: first_name,
@@ -19,8 +20,7 @@ export const sendEmail = (
     .send(
       process.env.GATSBY_EMAILJS_SERVICE_ID,
       process.env.GATSBY_EMAILJS_TEMPLATE_ID,
-      template_params,
-      process.env.GATSBY_EMAILJS_USER_ID
+      template_params
     )
     .then(
       response => {
