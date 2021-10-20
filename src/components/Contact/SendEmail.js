@@ -22,12 +22,10 @@ export const sendEmail = async (
       process.env.GATSBY_EMAILJS_TEMPLATE_ID,
       template_params
     )
-    .then(
-      response => {
-        console.log(response.status, response.text)
-      },
-      error => {
-        console.log(error.text)
-      }
-    )
+    .then(response => {
+      console.log(response.status, response.text)
+    })
+    .catch(error => {
+      console.log(error.text)
+    })
 }
