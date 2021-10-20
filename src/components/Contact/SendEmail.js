@@ -7,7 +7,7 @@ export const sendEmail = async (
   phone_number,
   description
 ) => {
-  init(process.env.GATSBY_EMAILJS_USER_ID)
+  await init(process.env.GATSBY_EMAILJS_USER_ID)
   const template_params = {
     email_address: email_address,
     first_name: first_name,
