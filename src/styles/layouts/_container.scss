@@ -1,7 +1,9 @@
 @import '../base/mixins';
+@import '../base/variables';
 
 .introduction_container {
-    padding: 40px;
+    padding-right: 40px;
+    padding-left: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -10,8 +12,10 @@
     padding-top: 150px;
     @include small {
         max-width: 600px;
-        padding: 30px;
+        padding-right: 30px;
+        padding-left: 30px;
     }
+    
 }
 
 .projects_container {
@@ -29,6 +33,12 @@
         padding-right: 30px;
         padding-left: 30px;
     }
+}
+
+.hyperModalWrapper___2sZCR .hyperModalContentWrapper___1o7Ug {
+    height: 100% !important;
+    width: 100% !important;
+    background-color: #083D77 !important;
 }
 
 .contact_container {

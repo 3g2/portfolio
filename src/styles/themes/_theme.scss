@@ -7,6 +7,10 @@
     background: $background_color;
     font-family: $font_400;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition:  1s ease-in-out;
 }
 
 /*Query on Demand appearing after applying meta tag related to content-security-policy*/

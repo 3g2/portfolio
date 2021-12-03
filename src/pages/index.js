@@ -14,7 +14,7 @@ export default function Index() {
       <Introduction />
       <About />
       <Experience />
-      <Contact />
+      {/* <Contact /> */}
       <Footer />
     </div>
   )

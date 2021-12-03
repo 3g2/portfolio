@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import ImageSlider from "./ImageSlider"
 import Popup from "./Popup"
+import HyperModal from "react-hyper-modal"
 
 import { BiLink } from "react-icons/bi"
 import { AiFillCloseCircle } from "react-icons/ai"
@@ -40,23 +41,14 @@ const Card = props => {
           </div>
         </div>
       </div>
-      <div>
-        <Popup
-          pop_up_state={pop_up_state}
-          toggle_pop_up_state={toggle_pop_up_state}
+      <div style={{ zIndex: 16 }}>
+        <HyperModal
+          classes={
+            "hyperModalWrapper___2sZCR hyperModalContentWrapper___1o7Ug .hyperCloseIcon___14vht"
+          }
+          isOpen={pop_up_state}
+          requestClose={() => toggle_pop_up_state(false)}
         >
-          <div className="card_pop_up_toolbar">
-            <div>
-              <button
-                className="close_pop_up_icon"
-                onClick={() => {
-                  toggle_pop_up_state(false)
-                }}
-              >
-                <AiFillCloseCircle />
-              </button>
-            </div>
-          </div>
           <div className="card_pop_up_header">
             <div className="card_pop_up_header_child">
               <div className="card_pop_up_title_container">
@@ -96,7 +88,7 @@ const Card = props => {
           <div>
             <p className="card_pop_up_description">{props.description}</p>
           </div>
-        </Popup>
+        </HyperModal>
       </div>
     </div>
   )

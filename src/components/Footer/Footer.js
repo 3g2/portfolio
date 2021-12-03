@@ -6,7 +6,7 @@ const Footer = () => {
     <div className="footer_container">
       <a
         className="footer_link"
-        href="https://github.com/3g2/portfolio"
+        href="https://github.com/maherhalabi/portfolio"
         rel="noreferrer"
         target="_blank"
       >

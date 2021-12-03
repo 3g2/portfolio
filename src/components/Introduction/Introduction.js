@@ -1,11 +1,11 @@
 import React from "react"
-import resume_PDF from "../assets/files/Maher_Halabi_Resume.pdf"
+import MaherHalabi from "../assets/files/MaherHalabi.pdf"
 import { AiFillLinkedin } from "react-icons/ai"
-import { AiFillGithub } from "react-icons/ai"
+import { AiFillGithub, AiOutlineMail } from "react-icons/ai"
+import { MdEmail } from "react-icons/md"
 import Technologies from "./Technologies"
 
 const Introduction = () => {
-  //2DO: Navigate to connect section as user clicks on contact link
   return (
     <div className="introduction_container" id="introduction">
       <div>
@@ -21,11 +21,11 @@ const Introduction = () => {
 
       <div className="introduction_button_container">
         <a
-          href={resume_PDF}
-          download="Maher_Halabi_Resume"
+          href={MaherHalabi}
+          download="Maher+Halabi"
           rel="noreferrer"
           target="_blank"
-        >
+        >                                                 
           <div className="introduction_button_span_container">
             <p className="introduction_button_span button_style_one">Resume</p>
           </div>
@@ -41,8 +41,21 @@ const Introduction = () => {
           </a>
         </div>
         <div className="introduction_icon_child">
-          <a href="https://github.com/3g2" rel="noreferrer" target="_blank">
+          <a
+            href="https://github.com/maherhalabi"
+            rel="noreferrer"
+            target="_blank"
+          >
             <AiFillGithub />
+          </a>
+        </div>
+        <div className="introduction_icon_child">
+          <a
+            href="mailto:maherhalabibeik@gmail.com"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <MdEmail />
           </a>
         </div>
       </div>
