@@ -11,9 +11,9 @@
     margin: 0 auto;
     padding-top: 150px;
     @include small {
-        max-width: 600px;
         padding-right: 30px;
         padding-left: 30px;
+        max-width: 80vw;
     }
     
 }
@@ -28,10 +28,10 @@
     max-width: 900px;
     margin: 0 auto;
     @include small {
-        max-width: 600px;
         padding-bottom: 30px;
         padding-right: 30px;
         padding-left: 30px;
+        max-width: 80vw;
     }
 }
 
@@ -41,16 +41,4 @@
     background-color: #2E282A !important;
 }
 
-.contact_container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 900px;
-    margin: 0 auto;
-    @include small {
-        max-width: 600px;
-        padding-bottom: 30px;
-        padding-right: 30px;
-        padding-left: 30px;
-    }
-}
+

@@ -20,43 +20,48 @@ const Introduction = () => {
       </div>
 
       <div className="introduction_button_container">
-        <a
-          href={MaherHalabi}
-          download="Maher+Halabi"
-          rel="noreferrer"
-          target="_blank"
-        >                                                 
-          <div className="introduction_button_span_container">
-            <p className="introduction_button_span button_style_one">Resume</p>
+        <div>
+          <a
+            href={MaherHalabi}
+            download="Maher+Halabi"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <div className="introduction_button_span_container">
+              <p className="introduction_button_span button_style_one">
+                Resume
+              </p>
+            </div>
+          </a>
+        </div>
+        <div className="introduction_button_group2">
+          <div className="introduction_icon_child">
+            <a
+              href="https://www.linkedin.com/in/maherhalabi/"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <AiFillLinkedin />
+            </a>
           </div>
-        </a>
-
-        <div className="introduction_icon_child">
-          <a
-            href="https://www.linkedin.com/in/maherhalabi/"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <AiFillLinkedin />
-          </a>
-        </div>
-        <div className="introduction_icon_child">
-          <a
-            href="https://github.com/maherhalabi"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <AiFillGithub />
-          </a>
-        </div>
-        <div className="introduction_icon_child">
-          <a
-            href="mailto:maherhalabibeik@gmail.com"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <MdEmail />
-          </a>
+          <div className="introduction_icon_child">
+            <a
+              href="https://github.com/maherhalabi"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <AiFillGithub />
+            </a>
+          </div>
+          <div className="introduction_icon_child">
+            <a
+              href="mailto:maherhalabibeik@gmail.com"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <MdEmail />
+            </a>
+          </div>
         </div>
       </div>
       <Technologies />

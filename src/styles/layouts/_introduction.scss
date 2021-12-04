@@ -4,8 +4,10 @@
 .introduction_button_container {
     display: flex;
     align-items: baseline;
+    justify-items: center;
     @include small {
-        justify-content: space-around;
+        justify-content: center;
+        flex-direction: column;
     }
 }
 
@@ -13,6 +15,7 @@
     margin-right: 40px;
     @include small {
         margin-right: 0px;
+        width: 100% !important;
     }
 }
 
@@ -23,27 +26,39 @@
     }
 }
 
+.introduction_button_group2 {
+    display: flex;
+    flex-direction: row;
+    width: 100% !important;
+    @include small {
+        justify-content: space-around;
+    }
+}
+
 .introduction_button_child {
     font-size: 30px;  
     border: 2px solid black;
     padding: 10px;
-    
 }
 
 .introduction_button_child > a {
     text-decoration: none;
-  
+    
 }
 
 .introduction_button_span {
     margin: 0;
     @include small {
-        padding: 10px !important
+        width: 100% !important;
     }
 }
 
 .introduction_icon_child {
     font-size: 40px; 
+    margin-right: 25px;
+    @include small {
+        margin-right: 0;
+    }
 }
 
 .introduction_icon_child a {
