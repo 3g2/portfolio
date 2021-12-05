@@ -13,3 +13,10 @@ export const hause_of_brands_images = [
     image: image_three,
   },
 ]
+
+export const covid19_images = [
+  {
+    image:
+      "https://i.postimg.cc/25qs2vrm/Fire-Shot-Capture-019-COVID19-Report-another-coronavirus-tracker-s3-website-us-west-2-amazonaws.png",
+  },
+]

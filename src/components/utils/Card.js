@@ -12,22 +12,26 @@ const Card = props => {
   return (
     <div className="card">
       <div className="card_container">
-        <div className="card_child_container">
-          <div className="card_logo_container">
-            <img
-              className="card_logo"
-              src={props.logo}
-              alt="Hause of Brands Logo"
-            />
-          </div>
-        </div>
+        <div className="group">
+          <div className="sub-group">
+            <div className="card_child_container">
+              <div className="card_logo_container">
+                <img
+                  className="card_logo"
+                  src={props.logo}
+                  alt="Hause of Brands Logo"
+                />
+              </div>
+            </div>
 
-        <div className="card_child_container">
-          <div className="card_title_container">
-            <h2 className="card_title">{props.title}</h2>
-          </div>
-          <div className="card_snippet_container">
-            <p className="card_snippet">{props.snippet}</p>
+            <div className="card_child_container">
+              <div className="card_title_container">
+                <h2 className="card_title">{props.title}</h2>
+              </div>
+              <div className="card_snippet_container">
+                <p className="card_snippet">{props.snippet}</p>
+              </div>
+            </div>
           </div>
           <div>
             <button
@@ -41,6 +45,7 @@ const Card = props => {
           </div>
         </div>
       </div>
+
       <div style={{ zIndex: 16 }}>
         <HyperModal
           classes={

@@ -28,17 +28,26 @@
     max-width: 900px;
     margin: 0 auto;
     @include small {
-        padding-bottom: 30px;
-        padding-right: 30px;
-        padding-left: 30px;
-        max-width: 80vw;
+   
+     
+    }
+}
+
+.projects_container_child {
+    display: flex;
+    justify-content: space-between;
+    @include small {
+        flex-direction: column;
+        width: 100%;
     }
 }
 
 .hyperModalWrapper___2sZCR .hyperModalContentWrapper___1o7Ug {
     height: 100% !important;
     width: 100% !important;
-    background-color: #2E282A !important;
+    background-color: black !important;
 }
 
-
+.hyperCloseIcon___14vht {
+    background-image: url("https://img.icons8.com/dotty/160/000000/delete-sign.png") !important;
+}
