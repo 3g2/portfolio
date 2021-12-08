@@ -28,8 +28,9 @@
     max-width: 900px;
     margin: 0 auto;
     @include small {
-   
-     
+        padding-right: 30px;
+        padding-left: 30px;  
+        max-width: 80vw;
     }
 }
 
