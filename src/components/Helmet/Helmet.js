@@ -10,7 +10,7 @@ const Metadata = () => {
         <meta
           http-equiv="Content-Security-Policy"
           content="
-          default-src 'self' https://api.emailjs.com/api/v1.0/email/send https://www.google-analytics.com; 
+          default-src 'self' https://www.google-analytics.com https://img.icons8.com/fluency/96/000000/close-window.png; 
           font-src http://fonts.gstatic.com; 
           style-src 'self' 'unsafe-inline' http://fonts.googleapis.com;
           "
