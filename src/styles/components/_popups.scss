@@ -28,7 +28,6 @@
     background-color: rgba(46, 49, 49, .995);
     @include small {
         width: 100vw;
-        padding: 20px;
     }
 }
 
@@ -74,8 +73,8 @@
     flex-direction: row;
     @include small {
         display: flex;
-        flex-direction: column;
         text-align: center;
+        justify-content: center;
      }
 }
 

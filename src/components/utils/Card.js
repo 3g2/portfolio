@@ -49,7 +49,7 @@ const Card = props => {
       <div style={{ zIndex: 16 }}>
         <HyperModal
           classes={
-            "hyperModalWrapper___2sZCR hyperModalContentWrapper___1o7Ug .hyperCloseIcon___14vht"
+            "hyperModalWrapper___2sZCR hyperModalContentWrapper___1o7Ug .hyperCloseIcon___14vht hyperCloseIconWrapper___ujoQX"
           }
           isOpen={pop_up_state}
           requestClose={() => toggle_pop_up_state(false)}
