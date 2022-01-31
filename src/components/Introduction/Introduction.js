@@ -20,20 +20,20 @@ const Introduction = () => {
       </div>
 
       <div className="introduction_button_container">
-//         <div>
-//           <a
-//             href={MaherHalabi}
-//             download="Maher+Halabi"
-//             rel="noreferrer"
-//             target="_blank"
-//           >
-//             <div className="introduction_button_span_container">
-//               <p className="introduction_button_span button_style_one">
-//                 Resume
-//               </p>
-//             </div>
-//           </a>
-//         </div>
+      {/* <div>
+          <a
+            href={MaherHalabi}
+            download="Maher+Halabi"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <div className="introduction_button_span_container">
+              <p className="introduction_button_span button_style_one">
+                Resume
+              </p>
+            </div>
+          </a>
+        </div> */}
         <div className="introduction_button_group2">
           <div className="introduction_icon_child">
             <a
